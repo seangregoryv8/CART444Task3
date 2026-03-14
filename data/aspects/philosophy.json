@@ -1,0 +1,21 @@
+{
+  "id": "philosophy",
+  "title": "Philosophy",
+  "sections": [
+    {
+      "heading": "Point of view",
+      "paragraphs": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.",
+        "Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
+      ]
+    },
+    {
+      "heading": "Principles",
+      "paragraphs": [
+        "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.",
+        "Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis."
+      ]
+    }
+  ]
+}
+

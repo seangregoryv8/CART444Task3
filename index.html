@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Philosophy Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <button id="menuToggle" class="iconButton" type="button" aria-controls="menu" aria-expanded="false">
+            <span class="srOnly">Open menu</span>
+            <span aria-hidden="true">☰</span>
+        </button>
+        <div class="topbarText">
+            <h1 id="siteTitle" class="title">Design Philosophy Index</h1>
+            <p id="siteTagline" class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </header>
+
+    <div id="backdrop" class="backdrop" hidden></div>
+
+    <nav id="menu" class="menu" aria-label="Design philosophy menu" hidden>
+        <div class="menuHeader">
+            <h2 class="menuTitle">Menu</h2>
+            <button id="menuClose" class="iconButton" type="button" aria-controls="menu" aria-expanded="true">
+                <span class="srOnly">Close menu</span>
+                <span aria-hidden="true">✕</span>
+            </button>
+        </div>
+        <ul id="philosophyList" class="menuList"></ul>
+    </nav>
+
+    <main class="content" id="content" tabindex="-1">
+        <section class="card">
+            <h2 class="sectionTitle">Overview</h2>
+            <div id="introParagraphs" class="prose">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="sectionTitle">How to use this</h2>
+            <div class="prose">
+                <p>Open the menu, then click a list item to drop down its (JSON-driven) placeholder text.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
