@@ -93,6 +93,12 @@ h4
     color: RED;
 }
 
+span
+{
+    font-size: 50%;
+    color: gray;
+}
+
 .indexTitle
 {
     display: flex;
