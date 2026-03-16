@@ -3,51 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Philosophy Index</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Foundation | Index</title>
+    <link rel="stylesheet" href="mainStyle.css">
 </head>
 <body>
-    <header class="topbar">
-        <button id="menuToggle" class="iconButton" type="button" aria-controls="menu" aria-expanded="false">
-            <span class="srOnly">Open menu</span>
-            <span aria-hidden="true">☰</span>
-        </button>
-        <div class="topbarText">
-            <h1 id="siteTitle" class="title">Design Philosophy Index</h1>
-            <p id="siteTagline" class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <aside class="sideBar" style="grid-column: 1;">
+        <div class="sideBarHeader">
+            <nav class="checklist" aria-label="Foundation">
+                <p>Foundation</p>
+                <a href="index.html" aria-current="page">Index</a>
+                <a href="types/grid.html">Grid</a>
+                <a href="types/spacing.html">Spacing</a>
+                <a href="types/breakpoints.html">Breakpoints</a>
+                <a href="types/layers.html">Layers</a>
+                <a href="types/color.html">Colour</a>
+                <a href="types/typography.html">Typography</a>
+                <a href="types/ratios.html">Image Aspect Ratios</a>
+                <a href="types/icons.html">Icons</a>
+            </nav>
         </div>
-    </header>
-
-    <div id="backdrop" class="backdrop" hidden></div>
-
-    <nav id="menu" class="menu" aria-label="Design philosophy menu" hidden>
-        <div class="menuHeader">
-            <h2 class="menuTitle">Menu</h2>
-            <button id="menuClose" class="iconButton" type="button" aria-controls="menu" aria-expanded="true">
-                <span class="srOnly">Close menu</span>
-                <span aria-hidden="true">✕</span>
-            </button>
-        </div>
-        <ul id="philosophyList" class="menuList"></ul>
-    </nav>
-
-    <main class="content" id="content" tabindex="-1">
-        <section class="card">
-            <h2 class="sectionTitle">Overview</h2>
-            <div id="introParagraphs" class="prose">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+    </aside>
+    <div class="mainContent" style="grid-column: 2;">
+        <section>
+            <h1 class="pageTitle">Foundation Index</h1>
+            <p>This is the front panel for the design system: a small set of foundations tuned to feel retro, steady, and analog. Use the sidebar to jump into each spec page.</p>
         </section>
-
-        <section class="card">
-            <h2 class="sectionTitle">How to use this</h2>
-            <div class="prose">
-                <p>Open the menu, then click a list item to drop down its (JSON-driven) placeholder text.</p>
-            </div>
+        <section>
+            <h2 class="pageSubtitle">How to use this</h2>
+            <p>Start with Grid and Spacing, then lock in Breakpoints and Layers. Once structure is stable, dial in Colour, Typography, Ratios, and Icons so everything reads like one coherent piece of hardware.</p>
         </section>
-    </main>
-
-    <script src="script.js" defer></script>
+    </div>
 </body>
 </html>

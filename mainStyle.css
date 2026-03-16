@@ -1,0 +1,158 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+body *
+{
+    padding: 0 5px;
+}
+
+.sideBar
+{
+    background-color: #0b0f19;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.checklist
+{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+}
+
+.checklist a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.checklist p
+{
+    color: gray;
+    font-size: 14px;
+}
+
+.mainContent
+{
+    padding: 50px;
+    background-color: #1b1f2a;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h4
+{
+    font-family: 'Vhs', sans-serif;
+    color: #f0f0f0;
+}
+
+p
+{
+    font-family: 'IBMPlexMono-Regular', monospace;
+    color: #c0c0c0;
+    max-width: 780px;
+    line-height: 1.5;
+}
+
+a
+{
+    font-family: 'IBMPlexMono-SemiBold', monospace;
+    color: #c0c0c0;
+}
+
+h1
+{
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2
+{
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+h4
+{
+    font-size: 20px;
+    color: RED;
+}
+
+/* VHS Font */
+@font-face
+{
+    font-family: 'Vhs';
+    src: url(../resources/Vhs.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: IBMBold;
+    src: url(../resources/IBMPlexMono-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMBoldItalic;
+    src: url(../resources/IBMPlexMono-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMExtraLight;
+    src: url(../resources/IBMPlexMono-ExtraLight.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMExtraLightItalic;
+    src: url(../resources/IBMPlexMono-ExtraLightItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMItalic;
+    src: url(../resources/IBMPlexMono-Italic.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMLight;
+    src: url(../resources/IBMPlexMono-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMLightItalic;
+    src: url(../resources/IBMPlexMono-LightItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMMedium;
+    src: url(../resources/IBMPlexMono-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMMediumItalic;
+    src: url(../resources/IBMPlexMono-MediumItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMRegular;
+    src: url(../resources/IBMPlexMono-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMSemiBold;
+    src: url(../resources/IBMPlexMono-SemiBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMSemiBoldItalic;
+    src: url(../resources/IBMPlexMono-SemiBoldItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMThin;
+    src: url(../resources/IBMPlexMono-Thin.ttf) format('truetype');
+}
+@font-face {
+    font-family: IBMThinItalic;
+    src: url(../resources/IBMPlexMono-ThinItalic.ttf) format('truetype');
+}
