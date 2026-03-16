@@ -63,7 +63,7 @@ h1, h2, h4
 
 p
 {
-    font-family: 'IBMPlexMono-Regular', monospace;
+    font-family: IBMRegular, monospace;
     color: #c0c0c0;
     max-width: 780px;
     line-height: 1.5;
@@ -71,7 +71,7 @@ p
 
 a
 {
-    font-family: 'IBMPlexMono-SemiBold', monospace;
+    font-family: IBMSemiBold, monospace;
     color: #c0c0c0;
 }
 
@@ -97,62 +97,62 @@ h4
 @font-face
 {
     font-family: 'Vhs';
-    src: url(../resources/Vhs.ttf) format('truetype');
+    src: url(resources/Vhs.ttf) format('truetype');
 }
 
 @font-face {
     font-family: IBMBold;
-    src: url(../resources/IBMPlexMono-Bold.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-Bold.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMBoldItalic;
-    src: url(../resources/IBMPlexMono-BoldItalic.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-BoldItalic.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMExtraLight;
-    src: url(../resources/IBMPlexMono-ExtraLight.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-ExtraLight.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMExtraLightItalic;
-    src: url(../resources/IBMPlexMono-ExtraLightItalic.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-ExtraLightItalic.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMItalic;
-    src: url(../resources/IBMPlexMono-Italic.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-Italic.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMLight;
-    src: url(../resources/IBMPlexMono-Light.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-Light.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMLightItalic;
-    src: url(../resources/IBMPlexMono-LightItalic.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-LightItalic.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMMedium;
-    src: url(../resources/IBMPlexMono-Medium.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-Medium.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMMediumItalic;
-    src: url(../resources/IBMPlexMono-MediumItalic.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-MediumItalic.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMRegular;
-    src: url(../resources/IBMPlexMono-Regular.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-Regular.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMSemiBold;
-    src: url(../resources/IBMPlexMono-SemiBold.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-SemiBold.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMSemiBoldItalic;
-    src: url(../resources/IBMPlexMono-SemiBoldItalic.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-SemiBoldItalic.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMThin;
-    src: url(../resources/IBMPlexMono-Thin.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-Thin.ttf) format('truetype');
 }
 @font-face {
     font-family: IBMThinItalic;
-    src: url(../resources/IBMPlexMono-ThinItalic.ttf) format('truetype');
+    src: url(resources/IBMPlexMono-ThinItalic.ttf) format('truetype');
 }
