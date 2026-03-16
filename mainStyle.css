@@ -57,7 +57,7 @@ body *
 
 h1, h2, h4
 {
-    font-family: 'Vhs';
+    font-family: 'Vhs', sans-serif;
     color: #f0f0f0;
 }
 
@@ -93,6 +93,19 @@ h4
     color: RED;
 }
 
+.indexTitle
+{
+    display: flex;
+    flex-direction: column;
+    gap: -10px;
+    margin: 20px;
+    text-decoration: none;
+}
+a p
+{
+    color: green;
+    font-family: IBMBold, monospace;
+}
 /* VHS Font */
 @font-face
 {
