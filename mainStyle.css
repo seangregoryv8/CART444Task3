@@ -1,3 +1,12 @@
+:root {
+    --color-primary: #11226e;
+    --color-background: #0D0D0F;
+    --color-text: #c0c0c1;
+    --color-accent: #a01441;
+    --color-secondary: #0a2207;
+    --color-text-muted: #797979;
+}
+
 *
 {
     margin: 0;
@@ -9,6 +18,7 @@ body
 {
     display: grid;
     grid-template-columns: 15% auto;
+    background-color: var(--color-background);
 }
 
 body *
@@ -18,7 +28,7 @@ body *
 
 .sideBar
 {
-    background-color: #0b0f19;
+    background-color: var(--color-secondary);
     color: white;
     height: 100vh;
     display: flex;
@@ -36,20 +46,19 @@ body *
 .checklist a
 {
     text-decoration: none;
-    color: white;
+    color: var(--color-text);
 }
 
 .checklist p
 {
-    color: gray;
+    color: var(--color-text-muted);
     font-size: 14px;
 }
 
 .mainContent
 {
     padding: 50px;
-    background-color: #1b1f2a;
-    color: white;
+    color: var(--color-text);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -58,13 +67,13 @@ body *
 h1, h2, h4
 {
     font-family: 'Vhs', sans-serif;
-    color: #f0f0f0;
+    color: var(--color-primary);
 }
 
 p
 {
     font-family: IBMRegular, monospace;
-    color: #c0c0c0;
+    color: var(--color-text);
     max-width: 780px;
     line-height: 1.5;
 }
@@ -72,7 +81,7 @@ p
 a
 {
     font-family: IBMSemiBold, monospace;
-    color: #c0c0c0;
+    color: var(--color-primary);
 }
 
 h1
@@ -90,13 +99,13 @@ h2
 h4
 {
     font-size: 20px;
-    color: RED;
+    color: var(--color-accent);
 }
 
 span
 {
     font-size: 50%;
-    color: gray;
+    color: var(--color-text-muted);
 }
 
 .indexTitle
@@ -109,7 +118,7 @@ span
 }
 a p
 {
-    color: green;
+    color: var(--color-accent);
     font-family: IBMBold, monospace;
 }
 /* VHS Font */
