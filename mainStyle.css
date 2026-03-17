@@ -19,6 +19,7 @@ body
     display: grid;
     grid-template-columns: 15% auto;
     background-color: var(--color-background);
+    align-items: start;
 }
 
 body *
@@ -28,11 +29,13 @@ body *
 
 .sideBar
 {
+    position: sticky;
+    top: 0;
+    align-self: start;
     background-color: var(--color-secondary);
     color: white;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    overflow-y: auto;
 }
 
 .checklist
@@ -59,7 +62,7 @@ body *
 {
     padding: 50px;
     color: var(--color-text);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -105,7 +108,7 @@ h4
 
 span
 {
-    font-size: 50%;
+    font-size: 75%;
     color: var(--color-text-muted);
 }
 
