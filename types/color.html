@@ -42,19 +42,170 @@
         </section>
         <section>
             <h2 class="pageSubtitle">core_palette<span>.hhr</span></h2>
-            <p>Start with dependable bases (ink, paper, graphite) and add a couple of retro brights (amber, cyan, signal red). The palette should feel like it came from a screen-print kit.</p>
+            <p>These are the tuned dials the whole site already uses. Each role is a named signal path—swap the hex and the whole system retunes without random one-off edits.</p>
+
+            <div class="demoRow" aria-label="Core palette swatches">
+                <figure class="demoPanel" aria-label="Background colour swatch">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">background<span>.bg</span></p>
+                        <p class="demoPanelMeta"><code>--color-background</code></p>
+                    </div>
+                    <div class="colorSwatch" style="--swatch: var(--color-background);">
+                        <div class="swatchChip" aria-hidden="true"></div>
+                        <div class="swatchInfo">
+                            <p class="swatchHex"><code>#0D0D0F</code></p>
+                            <p class="swatchUse">page canvas, CRT void, main background</p>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="demoPanel" aria-label="Primary colour swatch">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">primary<span>.pri</span></p>
+                        <p class="demoPanelMeta"><code>--color-primary</code></p>
+                    </div>
+                    <div class="colorSwatch" style="--swatch: var(--color-primary);">
+                        <div class="swatchChip" aria-hidden="true"></div>
+                        <div class="swatchInfo">
+                            <p class="swatchHex"><code>#11226e</code></p>
+                            <p class="swatchUse">headings, key emphasis, "ink" blue</p>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="demoPanel" aria-label="Secondary colour swatch">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">secondary<span>.sec</span></p>
+                        <p class="demoPanelMeta"><code>--color-secondary</code></p>
+                    </div>
+                    <div class="colorSwatch" style="--swatch: var(--color-secondary);">
+                        <div class="swatchChip" aria-hidden="true"></div>
+                        <div class="swatchInfo">
+                            <p class="swatchHex"><code>#24382c</code></p>
+                            <p class="swatchUse">sidebar surface, panels, structural surfaces</p>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="demoPanel" aria-label="Accent colour swatch">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">accent<span>.acc</span></p>
+                        <p class="demoPanelMeta"><code>--color-accent</code></p>
+                    </div>
+                    <div class="colorSwatch" style="--swatch: var(--color-accent);">
+                        <div class="swatchChip" aria-hidden="true"></div>
+                        <div class="swatchInfo">
+                            <p class="swatchHex"><code>#a01441</code></p>
+                            <p class="swatchUse">active states, key callouts, limited high-signal highlights</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
         </section>
         <section>
             <h2 class="pageSubtitle">color_roles<span>.eeqz</span></h2>
-            <p>Assign roles--background, surface, text, border, accent, success, warning, danger--so colors behave like labeled channels. Roles beat random hex codes every time.</p>
+            <p>Assign roles so colours behave like labeled channels. This system keeps the set small: a dark canvas, a surface green, and two high-signal inks—blue + magenta—with neutral text.</p>
+
+            <table aria-label="Colour roles table">
+                <thead>
+                    <tr>
+                        <th>role</th>
+                        <th>token</th>
+                        <th>hex</th>
+                        <th>usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>background</td>
+                        <td><code>--color-background</code></td>
+                        <td><code>#0D0D0F</code></td>
+                        <td>page canvas behind everything</td>
+                    </tr>
+                    <tr>
+                        <td>surface</td>
+                        <td><code>--color-secondary</code></td>
+                        <td><code>#24382c</code></td>
+                        <td>sidebar and structural surfaces</td>
+                    </tr>
+                    <tr>
+                        <td>text</td>
+                        <td><code>--color-text</code></td>
+                        <td><code>#c0c0c1</code></td>
+                        <td>default reading text</td>
+                    </tr>
+                    <tr>
+                        <td>text_muted</td>
+                        <td><code>--color-text-muted</code></td>
+                        <td><code>#797979</code></td>
+                        <td>secondary labels, suffixes, low-priority info</td>
+                    </tr>
+                    <tr>
+                        <td>link</td>
+                        <td><code>--color-link</code></td>
+                        <td><code>#c0c0cc</code></td>
+                        <td>navigation + link text (kept close to neutral)</td>
+                    </tr>
+                    <tr>
+                        <td>primary_ink</td>
+                        <td><code>--color-primary</code></td>
+                        <td><code>#11226e</code></td>
+                        <td>headings + strong emphasis</td>
+                    </tr>
+                    <tr>
+                        <td>accent_signal</td>
+                        <td><code>--color-accent</code></td>
+                        <td><code>#a01441</code></td>
+                        <td>active/selected, key callouts, danger-ish emphasis</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">usage_combinations<span>.vhr</span></h2>
             <p>Pair high-contrast text with quiet surfaces, then reserve accents for primary actions and key states. If everything glows, nothing glows.</p>
-        </section>
-        <section>
-            <h2 class="pageSubtitle">what_to_do<span>.rvr</span></h2>
-            <p>Do: keep contrast strong and accents rare. Don't: stack multiple saturated colors in one component or rely on color alone to communicate status.</p>
+
+            <div class="comboGrid" aria-label="Colour usage combinations">
+                <div class="comboCard" style="--combo-bg: var(--color-background); --combo-fg: var(--color-text); --combo-accent: var(--color-primary);">
+                    <p class="comboTitle">default_reading</p>
+                    <p class="comboBody">Use neutral text on the dark canvas. Save primary blue for headings.</p>
+                    <div class="comboMeta">
+                        <span><code>bg</code> #0D0D0F</span>
+                        <span><code>text</code> #c0c0c1</span>
+                        <span><code>primary</code> #11226e</span>
+                    </div>
+                </div>
+
+                <div class="comboCard" style="--combo-bg: var(--color-secondary); --combo-fg: var(--color-text); --combo-accent: var(--color-accent);">
+                    <p class="comboTitle">surface_panel</p>
+                    <p class="comboBody">Sidebar/panels: keep text neutral, use magenta sparingly for active.</p>
+                    <div class="comboMeta">
+                        <span><code>surface</code> #24382c</span>
+                        <span><code>text</code> #c0c0c1</span>
+                        <span><code>accent</code> #a01441</span>
+                    </div>
+                </div>
+
+                <div class="comboCard" style="--combo-bg: rgba(0,0,0,0.22); --combo-fg: var(--color-text); --combo-accent: var(--color-accent);">
+                    <p class="comboTitle">callout_state</p>
+                    <p class="comboBody">Use a quiet translucent surface + a single high-signal accent for focus.</p>
+                    <div class="comboMeta">
+                        <span><code>panel</code> rgba(0,0,0,0.22)</span>
+                        <span><code>text</code> #c0c0c1</span>
+                        <span><code>accent</code> #a01441</span>
+                    </div>
+                </div>
+
+                <div class="comboCard" style="--combo-bg: #ffffff; --combo-fg: #0D0D0F; --combo-accent: var(--color-primary);">
+                    <p class="comboTitle">light_mode</p>
+                    <p class="comboBody">In light mode, canvas flips to white while the primary ink stays blue.</p>
+                    <div class="comboMeta">
+                        <span><code>bg</code> #ffffff</span>
+                        <span><code>text</code> #0D0D0F</span>
+                        <span><code>primary</code> #11226e</span>
+                    </div>
+                </div>
+            </div>
         </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>

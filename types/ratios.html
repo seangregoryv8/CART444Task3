@@ -39,18 +39,119 @@
             <h4 class="pageCategory">FOUNDATION_MODULE_07</h4>
             <h1 class="pageTitle">image_ratios<span>.fra</span></h1>
             <p>Ratios keep imagery from feeling improvised. Think 4:3 monitors, contact sheets, and film frames--consistent shapes that make the system feel curated.</p>
+            <p>Aspect ratio refers to the proportional relationship between the width and height of an image or video frame. Maintaining consistent ratios helps to create a visual rhythm throughout the interface, supports alignment within the grid system, and ensures that the presentation of media appears structured. This design system utilizes a limited set of standard ratios to accommodate the various media types present, such as short films, video games, photography, and documentation.</p>
         </section>
         <section>
             <h2 class="pageSubtitle">ratio_rules<span>.rul</span></h2>
             <p>Choose a small set (1:1, 4:3, 16:9) and stick to it. When in doubt, default to the ratio that preserves the subject without awkward cropping.</p>
+
+            <table aria-label="Ratio roles table">
+                <thead>
+                    <tr>
+                        <th>ratio</th>
+                        <th>role</th>
+                        <th>best for</th>
+                        <th>cropping notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>16:9</td>
+                        <td>banner / wide_frame</td>
+                        <td>hero headers, wide previews, section banners</td>
+                        <td>crop top/bottom first; keep subject centered horizontally</td>
+                    </tr>
+                    <tr>
+                        <td>4:3</td>
+                        <td>classic_frame</td>
+                        <td>documentation images, posters, “CRT” feeling frames</td>
+                        <td>most forgiving; feels stable for mixed subjects</td>
+                    </tr>
+                    <tr>
+                        <td>3:2</td>
+                        <td>photo_frame</td>
+                        <td>photography, cards with image + text</td>
+                        <td>slightly wider than 4:3; watch edge crops on faces</td>
+                    </tr>
+                    <tr>
+                        <td>1:1</td>
+                        <td>avatar / tile</td>
+                        <td>icons, avatars, grids, thumbnails</td>
+                        <td>crop evenly; use safe area for faces/logos</td>
+                    </tr>
+                    <tr>
+                        <td>2:1</td>
+                        <td>panorama_strip</td>
+                        <td>feature strips, timeline cards, wide labels</td>
+                        <td>very wide; keep key content in the center third</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">ratio_demonstrations<span>.demo</span></h2>
             <p>Show the same image across approved frames with safe areas marked, like a camera viewfinder. Demonstrations should teach how cropping behaves, not just what looks cool.</p>
+
+            <figure class="demoPanel" aria-label="Ratio demonstration showcase">
+                <div class="demoPanelHeader">
+                    <p class="demoPanelTitle">ratio_frames_showcase<span>.demo</span></p>
+                    <p class="demoPanelMeta">approved_set · 16:9 / 4:3 / 3:2 / 1:1 / 2:1</p>
+                </div>
+
+                <div class="ratioGrid" aria-label="Ratio frame examples">
+                    <div class="ratioCard">
+                        <div class="ratioFrame" style="--ratio: 16 / 9;">
+                            <div class="ratioSafe" aria-hidden="true"></div>
+                            <div class="ratioCross" aria-hidden="true"></div>
+                            <p class="ratioStamp">16:9</p>
+                        </div>
+                        <p class="ratioNote">banner / hero</p>
+                    </div>
+
+                    <div class="ratioCard">
+                        <div class="ratioFrame" style="--ratio: 4 / 3;">
+                            <div class="ratioSafe" aria-hidden="true"></div>
+                            <div class="ratioCross" aria-hidden="true"></div>
+                            <p class="ratioStamp">4:3</p>
+                        </div>
+                        <p class="ratioNote">classic / docs</p>
+                    </div>
+
+                    <div class="ratioCard">
+                        <div class="ratioFrame" style="--ratio: 3 / 2;">
+                            <div class="ratioSafe" aria-hidden="true"></div>
+                            <div class="ratioCross" aria-hidden="true"></div>
+                            <p class="ratioStamp">3:2</p>
+                        </div>
+                        <p class="ratioNote">photo / card</p>
+                    </div>
+
+                    <div class="ratioCard">
+                        <div class="ratioFrame" style="--ratio: 1 / 1;">
+                            <div class="ratioSafe" aria-hidden="true"></div>
+                            <div class="ratioCross" aria-hidden="true"></div>
+                            <p class="ratioStamp">1:1</p>
+                        </div>
+                        <p class="ratioNote">avatar / tile</p>
+                    </div>
+
+                    <div class="ratioCard">
+                        <div class="ratioFrame" style="--ratio: 2 / 1;">
+                            <div class="ratioSafe" aria-hidden="true"></div>
+                            <div class="ratioCross" aria-hidden="true"></div>
+                            <p class="ratioStamp">2:1</p>
+                        </div>
+                        <p class="ratioNote">strip / panorama</p>
+                    </div>
+                </div>
+
+                <figcaption class="demoPanelCaption">Each frame shows a safe area (dashed) and center crosshair. When placing real imagery, keep faces/logos inside the safe box to survive responsive crops.</figcaption>
+            </figure>
         </section>
         <section>
             <h2 class="pageSubtitle">system_logic<span>.log</span></h2>
             <p>Let content pick the frame: portraits lean 4:3, banners lean 16:9, avatars stay 1:1. The rule is simple: predictable containers, flexible media inside.</p>
+            <p>They must work with the grid system to create predictable media layers.</p>
         </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>

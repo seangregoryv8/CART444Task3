@@ -6,6 +6,10 @@ function setToggleIcon(isLight) {
     btn.style.setProperty("--y", 3);
 
     document.querySelector(".effectsToggle").style.setProperty("--x", isLight ? 2 : 3);
+    console.log(document.getElementsByClassName("iconInline"))
+    let icons = document.getElementsByClassName("iconInline");
+    for (let i = 0; i <= icons.length; i++)
+        icons[i].style.setProperty("--x", isLight ? 2 : 3)
 }
 
 function applyTheme(isLight) {

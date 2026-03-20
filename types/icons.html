@@ -42,19 +42,241 @@
         </section>
         <section>
             <h2 class="pageSubtitle">icon_style<span>.sty</span></h2>
-            <p>Use consistent stroke weight, corner radius, and geometry so the set feels unified. Avoid fussy detail; think "panel label", not illustration.</p>
+            <p>This set is a single pixel-sprite sheet (<code>media.png</code>) with 32×32 cells. Icons should feel like hardware glyphs: chunky, high-contrast, and snapped to a strict grid.</p>
+
+            <table aria-label="Icon style guidelines table">
+                <thead>
+                    <tr>
+                        <th>rule</th>
+                        <th>guideline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>grid</td>
+                        <td>design on a 32×32 pixel cell; align edges to whole pixels (no subpixel curves)</td>
+                    </tr>
+                    <tr>
+                        <td>stroke</td>
+                        <td>prefer 1–2px strokes; keep weight consistent across the whole set</td>
+                    </tr>
+                    <tr>
+                        <td>silhouette</td>
+                        <td>readable at a glance; remove detail until the shape survives at 1× size</td>
+                    </tr>
+                    <tr>
+                        <td>palette</td>
+                        <td>limit colours per icon (2–4); bias toward system inks (<code>--color-primary</code>, <code>--color-accent</code>) + neutrals</td>
+                    </tr>
+                    <tr>
+                        <td>padding</td>
+                        <td>keep ~2–4px breathing room from the cell edge so icons don’t “touch the frame”</td>
+                    </tr>
+                    <tr>
+                        <td>motion</td>
+                        <td>if animating, do it by swapping cells (sprite frames), not by blurring/transforming the bitmap</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">icon_library_preview<span>.demo</span></h2>
             <p>Preview the core set: navigation, actions, media controls, and status marks. If it belongs on a remote control or mixing board, it belongs here.</p>
+
+            <figure class="demoPanel" aria-label="Icon library preview">
+                <div class="demoPanelHeader">
+                    <p class="demoPanelTitle">sprite_sheet_preview<span>.png</span></p>
+                    <p class="demoPanelMeta">cell_32px · sheet_4x5</p>
+                </div>
+
+                <div class="diagramWrap" aria-label="Grid preview of all icon sprite cells">
+                    <div class="iconLibraryGrid" role="list" aria-label="Icon sprite cells">
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:0; --y:0"></div>
+                            <p class="iconName">cell_00 - linkedIn</p>
+                            <p class="iconCoords"><code>--x:0</code> <code>--y:0</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:1; --y:0"></div>
+                            <p class="iconName">cell_10 - instagram</p>
+                            <p class="iconCoords"><code>--x:1</code> <code>--y:0</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:2; --y:0"></div>
+                            <p class="iconName">cell_20 - youtube</p>
+                            <p class="iconCoords"><code>--x:2</code> <code>--y:0</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:3; --y:0"></div>
+                            <p class="iconName">cell_30 - skype</p>
+                            <p class="iconCoords"><code>--x:3</code> <code>--y:0</code></p>
+                        </div>
+
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:0; --y:1"></div>
+                            <p class="iconName">cell_01 - github_dark</p>
+                            <p class="iconCoords"><code>--x:0</code> <code>--y:1</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:1; --y:1"></div>
+                            <p class="iconName">cell_11 - github_light</p>
+                            <p class="iconCoords"><code>--x:1</code> <code>--y:1</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:2; --y:1"></div>
+                            <p class="iconName">cell_21 - user_dark</p>
+                            <p class="iconCoords"><code>--x:2</code> <code>--y:1</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:3; --y:1"></div>
+                            <p class="iconName">cell_31 - user_light</p>
+                            <p class="iconCoords"><code>--x:3</code> <code>--y:1</code></p>
+                        </div>
+
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:0; --y:2"></div>
+                            <p class="iconName">cell_02 - home_dark</p>
+                            <p class="iconCoords"><code>--x:0</code> <code>--y:2</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:1; --y:2"></div>
+                            <p class="iconName">cell_12 - home_light</p>
+                            <p class="iconCoords"><code>--x:1</code> <code>--y:2</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:2; --y:2"></div>
+                            <p class="iconName">cell_22 - search_dark</p>
+                            <p class="iconCoords"><code>--x:2</code> <code>--y:2</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:3; --y:2"></div>
+                            <p class="iconName">cell_32 - search_light</p>
+                            <p class="iconCoords"><code>--x:3</code> <code>--y:2</code></p>
+                        </div>
+
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:0; --y:3"></div>
+                            <p class="iconName">cell_03 - settings_dark</p>
+                            <p class="iconCoords"><code>--x:0</code> <code>--y:3</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:1; --y:3"></div>
+                            <p class="iconName">cell_13 - settings_light</p>
+                            <p class="iconCoords"><code>--x:1</code> <code>--y:3</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:2; --y:3"></div>
+                            <p class="iconName">cell_23 - mode_dark</p>
+                            <p class="iconCoords"><code>--x:2</code> <code>--y:3</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:3; --y:3"></div>
+                            <p class="iconName">cell_33 - mode_light</p>
+                            <p class="iconCoords"><code>--x:3</code> <code>--y:3</code></p>
+                        </div>
+
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:0; --y:4"></div>
+                            <p class="iconName">cell_04 - mail_dark</p>
+                            <p class="iconCoords"><code>--x:0</code> <code>--y:4</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:1; --y:4"></div>
+                            <p class="iconName">cell_14 - mail_light</p>
+                            <p class="iconCoords"><code>--x:1</code> <code>--y:4</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:2; --y:4"></div>
+                            <p class="iconName">cell_24 - image_dark</p>
+                            <p class="iconCoords"><code>--x:2</code> <code>--y:4</code></p>
+                        </div>
+                        <div class="iconTile" role="listitem">
+                            <div class="icon iconSample" style="--x:3; --y:4"></div>
+                            <p class="iconName">cell_34 - image_light</p>
+                            <p class="iconCoords"><code>--x:3</code> <code>--y:4</code></p>
+                        </div>
+                    </div>
+                </div>
+
+                <figcaption class="demoPanelCaption">Each icon is selected by setting CSS vars: <code>--x</code> (column 0–3) and <code>--y</code> (row 0–4). Keep naming consistent (e.g., <code>ic_search</code>) and map to a coordinate.</figcaption>
+            </figure>
         </section>
         <section>
             <h2 class="pageSubtitle">icon_sizing_and_usage<span>.size</span></h2>
-            <p>Snap icons to a pixel grid and use a small set of sizes (e.g., 16/20/24). Keep alignment consistent so icons don't look like they're drifting between frames.</p>
+            <p>Because the set is pixel-based, scale in whole-number steps. Keep the icon cell 32px, then scale to 64px or 96px with CSS. For tap targets, add padding around the icon (don’t scale the bitmap to “fake” a hit area).</p>
+
+            <table aria-label="Icon sizing and usage table">
+                <thead>
+                    <tr>
+                        <th>size</th>
+                        <th>how</th>
+                        <th>use</th>
+                        <th>notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>32px</td>
+                        <td><code>.icon</code></td>
+                        <td>inline glyphs, lists, UI chrome</td>
+                        <td>default; stays crisp at 1×</td>
+                    </tr>
+                    <tr>
+                        <td>64px</td>
+                        <td><code>transform: scale(2)</code></td>
+                        <td>feature buttons, empty states, demo panels</td>
+                        <td>integer scaling keeps pixels sharp</td>
+                    </tr>
+                    <tr>
+                        <td>96px</td>
+                        <td><code>transform: scale(3)</code></td>
+                        <td>hero toggles / “hardware” controls</td>
+                        <td>use sparingly; add breathing room</td>
+                    </tr>
+                    <tr>
+                        <td>tap target</td>
+                        <td>padding around icon</td>
+                        <td>click/tap controls</td>
+                        <td>aim for ~44px minimum interactive area</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">icon_usage_examples<span>.ecwq</span></h2>
             <p>Use icons with labels for clarity in primary actions, and icon-only buttons only when the meaning is universal. In dense UIs, treat icons like shorthand, not decoration.</p>
+
+            <div class="demoRow" aria-label="Icon usage examples">
+                <figure class="demoPanel" aria-label="Icon inside button example">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">button_with_icon<span>.demo</span></p>
+                        <p class="demoPanelMeta">label + icon</p>
+                    </div>
+                    <div class="iconExampleRow">
+                        <button class="dsButton" type="button">
+                            <span class="icon iconInline" style="--x:2; --y:2" aria-hidden="true"></span>
+                            <span>search</span>
+                        </button>
+                        <p class="iconExampleNote">Prefer label + icon for primary actions.</p>
+                    </div>
+                </figure>
+
+                <figure class="demoPanel" aria-label="Icon only button example">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">icon_only_control<span>.demo</span></p>
+                        <p class="demoPanelMeta">icon-only</p>
+                    </div>
+                    <div class="iconExampleRow">
+                        <button class="iconButton" type="button" aria-label="Open settings">
+                            <span class="icon iconInline" style="--x:2; --y:3" aria-hidden="true"></span>
+                        </button>
+                        <button class="iconButton" type="button" aria-label="Open mail">
+                            <span class="icon iconInline" style="--x:2; --y:4" aria-hidden="true"></span>
+                        </button>
+                        <p class="iconExampleNote">Only use when meaning is universal; always add <code>aria-label</code>.</p>
+                    </div>
+                </figure>
+            </div>
         </section>
         <section>
             <h2 class="pageSubtitle">icon_accessibility<span>.acc</span></h2>
