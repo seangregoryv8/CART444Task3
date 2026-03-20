@@ -2,8 +2,9 @@
     --color-primary: #11226e;
     --color-background: #0D0D0F;
     --color-text: #c0c0c1;
+    --color-link: #c0c0cc;
     --color-accent: #a01441;
-    --color-secondary: #0a2207;
+    --color-secondary: #24382c;
     --color-text-muted: #797979;
 }
 
@@ -33,7 +34,7 @@ body *
     top: 0;
     align-self: start;
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--color-text);
     height: 100vh;
     overflow-y: auto;
 }
@@ -49,7 +50,7 @@ body *
 .checklist a
 {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-link);
 }
 
 .checklist p
@@ -187,4 +188,26 @@ a p
 @font-face {
     font-family: IBMThinItalic;
     src: url(resources/IBMPlexMono-ThinItalic.ttf) format('truetype');
+}
+
+.icon
+{
+    width: 32px;
+    height: 32px;
+    background-image: url('media.png');
+    background-size: 128px 160px;
+    background-position: calc(var(--x) * -32px) calc(var(--y) * -32px);
+}
+
+.light-mode {
+    --color-background: #ffffff;
+    --color-text: #0D0D0F;
+}
+
+.lightDarkToggle
+{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    scale: 3;
 }
