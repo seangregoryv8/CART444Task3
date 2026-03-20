@@ -15,6 +15,19 @@
     --space-6: 48px;
     --space-7: 64px;
     --space-8: 96px;
+
+    --bp-mobile: 600px;
+    --bp-mobileH: 768px;
+    --bp-tablet: 768px;
+    --bp-tabletH: 1024px;
+    --bp-crt: 1280px;
+    --bp-desktop: 1440px;
+    --bp-wide: 1920px;
+
+    --layer-base: 0;
+    --layer-content: 10;
+    --layer-elevated: 100;
+    --layer-overlay: 1000;
 }
 
 *
@@ -608,6 +621,155 @@ tbody td:first-child
     letter-spacing: 0.04em;
 }
 
+/* Layers demo (used on types/layers.html) */
+.layerDemoStage
+{
+    position: relative;
+    padding: 16px;
+    height: 280px;
+    min-width: 760px;
+}
+
+.layerSurface
+{
+    position: absolute;
+    border: 1px solid rgba(121, 121, 121, 0.55);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.layerBase
+{
+    inset: 16px;
+    background:
+        linear-gradient(180deg, rgba(17, 34, 110, 0.10), rgba(0, 0, 0, 0.12)),
+        radial-gradient(circle at 20% 30%, rgba(160, 20, 65, 0.10), transparent 55%);
+    z-index: var(--layer-base);
+}
+
+.layerContent
+{
+    left: 46px;
+    top: 46px;
+    width: 64%;
+    height: 56%;
+    background: rgba(0, 0, 0, 0.26);
+    border-color: rgba(17, 34, 110, 0.75);
+    z-index: var(--layer-content);
+    padding: 14px;
+}
+
+.layerElevated
+{
+    right: 68px;
+    top: 84px;
+    width: 30%;
+    height: 44%;
+    background: rgba(0, 0, 0, 0.34);
+    border-color: rgba(160, 20, 65, 0.75);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+    z-index: var(--layer-elevated);
+    padding: 14px;
+}
+
+.layerOverlay
+{
+    left: 34%;
+    top: 34%;
+    width: 46%;
+    height: 46%;
+    background: rgba(0, 0, 0, 0.55);
+    border-color: rgba(192, 192, 193, 0.55);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    z-index: var(--layer-overlay);
+    padding: 14px;
+}
+
+.layerStamp
+{
+    font-family: IBMSemiBold, monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    color: var(--color-link);
+    max-width: none;
+    margin-bottom: 10px;
+}
+
+.layerNote
+{
+    font-family: IBMRegular, monospace;
+    font-size: 14px;
+    color: var(--color-text);
+    max-width: none;
+    margin-top: 6px;
+}
+
+.layerLine
+{
+    height: 8px;
+    border: 1px solid rgba(121, 121, 121, 0.35);
+    background: rgba(255, 255, 255, 0.04);
+    margin-top: 12px;
+}
+
+.layerLineShort
+{
+    width: 72%;
+}
+
+.layerActions
+{
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.layerBtn
+{
+    font-family: IBMRegular, monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+    color: var(--color-text);
+    border: 1px solid rgba(121, 121, 121, 0.55);
+    background: rgba(0, 0, 0, 0.35);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.layerBtnPrimary
+{
+    border-color: rgba(160, 20, 65, 0.85);
+    background: rgba(160, 20, 65, 0.18);
+}
+
+.layerLegend
+{
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    z-index: calc(var(--layer-overlay) + 1);
+}
+
+.layerChip
+{
+    font-family: IBMRegular, monospace;
+    font-size: 12px;
+    color: var(--color-text);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px dashed rgba(121, 121, 121, 0.55);
+    padding: 4px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    max-width: none;
+}
+
 /* Spacing demos (used on types/spacing.html) */
 .demoRow
 {
@@ -689,8 +851,9 @@ tbody td:first-child
 .dsButton
 {
     appearance: none;
-    border: 1px solid rgba(121, 121, 121, 0.75);
-    background: rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    border: 1px solid rgba(17, 34, 110, 0.85);
+    background: linear-gradient(180deg, rgba(17, 34, 110, 0.14), rgba(0, 0, 0, 0.28));
     color: var(--color-text);
     font-family: IBMSemiBold, monospace;
     text-transform: lowercase;
@@ -700,17 +863,40 @@ tbody td:first-child
     align-items: center;
     gap: 8px;
     border-radius: 6px;
-    box-shadow: 0 0 0 1px rgba(160, 20, 65, 0.25) inset;
+    box-shadow:
+        0 0 0 1px rgba(160, 20, 65, 0.22) inset,
+        0 10px 28px rgba(0, 0, 0, 0.28);
+    transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
 }
 
 .dsButton:hover
 {
     border-color: rgba(160, 20, 65, 0.85);
+    background: linear-gradient(180deg, rgba(160, 20, 65, 0.12), rgba(0, 0, 0, 0.28));
 }
 
 .dsButton:active
 {
     transform: translateY(1px);
+}
+
+.dsButton:focus-visible
+{
+    outline: 2px solid rgba(160, 20, 65, 0.95);
+    outline-offset: 2px;
+}
+
+.light-mode .dsButton
+{
+    background: linear-gradient(180deg, rgba(17, 34, 110, 0.10), rgba(255, 255, 255, 0.75));
+    box-shadow:
+        0 0 0 1px rgba(160, 20, 65, 0.18) inset,
+        0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.light-mode .dsButton:hover
+{
+    background: linear-gradient(180deg, rgba(160, 20, 65, 0.10), rgba(255, 255, 255, 0.75));
 }
 
 .dsButtonIcon
@@ -776,6 +962,13 @@ tbody td:first-child
     text-transform: lowercase;
     letter-spacing: 0.06em;
     white-space: nowrap;
+}
+
+.dsButtonText
+{
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 800;
 }
 
 .measureTop

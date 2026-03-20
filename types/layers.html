@@ -38,19 +38,128 @@
         <section>
             <h4 class="pageCategory">FOUNDATION_MODULE_04</h4>
             <h1 class="pageTitle">layer_stack<span>.str</span></h1>
-            <p>Layers are our acetate sheets--each one holds a purpose, and together they build depth without muddying the message.</p>
+            <p>Layers are the depth rules of the interface: what sits behind, what sits on top, and what must always win focus. In CSS this is mostly controlled by <code>position</code> + <code>z-index</code> (and the stacking contexts they create).</p>
         </section>
         <section>
             <h2 class="pageSubtitle">layer_history<span>.hist</span></h2>
-            <p>Borrow from analog workflows: paper, tape, overlays, and light tables. The best layering feels like careful collage, not a pile of stickers.</p>
+            <p>Think of it like a light table: base paper (background), the drawing (content), acetate notes (elevated UI), then a full-sheet overlay (modal/menu) when you need attention to snap to one place.</p>
+            <table aria-label="Layer hierarchy table">
+                <thead>
+                    <tr>
+                        <th>layer</th>
+                        <th>role</th>
+                        <th>what it contains</th>
+                        <th>why it exists</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>background</td>
+                        <td>page canvas, base surfaces</td>
+                        <td>sets atmosphere without competing with content</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>content</td>
+                        <td>reading regions, main layout blocks</td>
+                        <td>keeps information stable and scannable</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>elevated_ui</td>
+                        <td>cards, controls, callouts</td>
+                        <td>adds emphasis for interactive objects</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>overlay</td>
+                        <td>dialogs, menus, toasts, focus states</td>
+                        <td>forces priority and reduces distraction</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">applied_layering_example<span>.demo</span></h2>
-            <p>Use a scrim behind modals like dimming the room for a projector slide. Elevate the active surface, soften the background, and keep focus locked to the top layer.</p>
+            <p>The demo below shows the four roles stacked together. Notice that overlay wins, elevated UI sits above content, and content sits above the base canvas.</p>
+
+            <figure class="demoPanel" aria-label="Applied layering example">
+                <div class="demoPanelHeader">
+                    <p class="demoPanelTitle">layer_stack_overlay<span>.demo</span></p>
+                    <p class="demoPanelMeta">base 0 · content 10 · elevated 100 · overlay 1000</p>
+                </div>
+
+                <div class="diagramWrap" aria-label="Layered UI stack demonstration">
+                    <div class="layerDemoStage" role="img" aria-label="A background surface, content surface, elevated card, and overlay modal stacked with z-index tokens">
+                        <div class="layerSurface layerBase" aria-hidden="true"></div>
+
+                        <div class="layerSurface layerContent" aria-hidden="true">
+                            <p class="layerStamp">content_surface</p>
+                            <div class="layerLine" aria-hidden="true"></div>
+                            <div class="layerLine layerLineShort" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="layerSurface layerElevated" aria-hidden="true">
+                            <p class="layerStamp">elevated_card</p>
+                            <p class="layerNote">cards + controls</p>
+                        </div>
+
+                        <div class="layerSurface layerOverlay" aria-hidden="true">
+                            <p class="layerStamp">overlay_modal</p>
+                            <p class="layerNote">menus + dialogs</p>
+                            <div class="layerActions" aria-hidden="true">
+                                <span class="layerBtn">cancel</span>
+                                <span class="layerBtn layerBtnPrimary">confirm</span>
+                            </div>
+                        </div>
+
+                        <div class="layerLegend" aria-hidden="true">
+                            <span class="layerChip">base: <code>--layer-base</code></span>
+                            <span class="layerChip">content: <code>--layer-content</code></span>
+                            <span class="layerChip">elevated: <code>--layer-elevated</code></span>
+                            <span class="layerChip">overlay: <code>--layer-overlay</code></span>
+                        </div>
+                    </div>
+                </div>
+
+                <figcaption class="demoPanelCaption">Rule of thumb: only elevate when it increases clarity. Use overlays sparingly—they interrupt reading flow by design.</figcaption>
+            </figure>
         </section>
         <section>
             <h2 class="pageSubtitle">layer_tokens<span>.tok</span></h2>
-            <p>Define a simple z-index scale (base, raised, overlay, modal, toast) and never freestyle it. Tokens make stacking order feel like a labeled rack, not a mystery.</p>
+            <p>Tokens make layering predictable: engineers can place things without guessing and designers can review stacks without hunting through random z-index numbers.</p>
+            <table aria-label="Layer tokens table">
+                <thead>
+                    <tr>
+                        <th>token</th>
+                        <th>value</th>
+                        <th>use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--layer-base</code></td>
+                        <td>0</td>
+                        <td>background canvas and foundational surfaces</td>
+                    </tr>
+                    <tr>
+                        <td><code>--layer-content</code></td>
+                        <td>10</td>
+                        <td>primary content regions and reading surfaces</td>
+                    </tr>
+                    <tr>
+                        <td><code>--layer-elevated</code></td>
+                        <td>100</td>
+                        <td>cards, controls, and emphasized interface objects</td>
+                    </tr>
+                    <tr>
+                        <td><code>--layer-overlay</code></td>
+                        <td>1000</td>
+                        <td>dialogs, popovers, menus, and temporary overlays</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
