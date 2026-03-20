@@ -267,6 +267,7 @@ a p
 
 .light-mode
 {
+    --color-primary: #2342cf;
     --color-background: #ffffff;
     --color-text: #0D0D0F;
     --color-link: #3a3a3a;
