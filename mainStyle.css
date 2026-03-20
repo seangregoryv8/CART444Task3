@@ -206,10 +206,22 @@ a p
 
 .lightDarkToggle
 {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     scale: 3;
+    z-index: 30;
+    padding: 0;
+}
+
+.effectsToggle
+{
+    position: fixed;
+    top: 30px;
+    right: 150px;
+    scale: 3;
+    z-index: 30;
+    padding: 0;
 }
 
 /* Tables (system-wide) */

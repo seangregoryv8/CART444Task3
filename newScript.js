@@ -4,6 +4,8 @@ function setToggleIcon(isLight) {
 
     btn.style.setProperty("--x", isLight ? 2 : 3);
     btn.style.setProperty("--y", 3);
+
+    document.querySelector(".effectsToggle").style.setProperty("--x", isLight ? 2 : 3);
 }
 
 function applyTheme(isLight) {
@@ -23,4 +25,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.classList.toggle("light-mode", isLight);
     setToggleIcon(isLight);
+});
+
+function setEffectsIcon(isEffectsOn) {
+    btn.style.setProperty("--y", 4);
+    btn.setAttribute("aria-pressed", String(!isEffectsOn));
+}
+
+function applyEffects(isEffectsOn) {
+    document.body.classList.toggle("effects-off", !isEffectsOn);
+    localStorage.setItem("effects", isEffectsOn ? "on" : "off");
+    setEffectsIcon(isEffectsOn);
+}
+
+function toggleEffects() {
+    const isEffectsOn = !document.body.classList.contains("effects-off");
+    applyEffects(!isEffectsOn);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedEffects = localStorage.getItem("effects");
+    const isEffectsOn = savedEffects !== "off";
+    applyEffects(isEffectsOn);
 });

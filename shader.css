@@ -125,3 +125,20 @@
     background: rgba(9, 8, 8, 0.1);
     animation: flicker 0.3301s infinite;
 }
+
+/* Effect toggle */
+body.effects-off.crt::before,
+body.effects-off.crt::after,
+body.effects-off .scanlines,
+body.effects-off .scanline,
+body.effects-off .flicker
+{
+    opacity: 0 !important;
+    animation: none !important;
+}
+
+body.effects-off.crt
+{
+    animation: none !important;
+    text-shadow: none !important;
+}
