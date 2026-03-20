@@ -211,3 +211,174 @@ a p
     right: 30px;
     scale: 3;
 }
+
+/* Tables (system-wide) */
+table
+{
+    width: min(100%, 980px);
+    margin-top: 18px;
+    padding: 0;
+    border-collapse: collapse;
+    border: 1px solid var(--color-text-muted);
+    background: rgba(0, 0, 0, 0.18);
+}
+
+thead th
+{
+    font-family: IBMSemiBold, monospace;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    background: rgba(17, 34, 110, 0.14);
+    border-bottom: 1px solid var(--color-text-muted);
+}
+
+th, td
+{
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    font-family: IBMRegular, monospace;
+    color: var(--color-text);
+}
+
+tbody td
+{
+    border-bottom: 1px solid rgba(121, 121, 121, 0.35);
+}
+
+tbody tr:nth-child(even)
+{
+    background: rgba(255, 255, 255, 0.03);
+}
+
+tbody td:first-child
+{
+    font-family: IBMSemiBold, monospace;
+    color: var(--color-text);
+    white-space: nowrap;
+}
+
+/* Grid demo panel (used on types/grid.html) */
+.demoPanel
+{
+    width: min(100%, 980px);
+    margin-top: 22px;
+    border: 1px solid var(--color-text-muted);
+    background: rgba(0, 0, 0, 0.22);
+    padding: 14px 14px 12px;
+}
+
+.demoPanel *
+{
+    padding: 0;
+}
+
+.demoPanelHeader
+{
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(121, 121, 121, 0.55);
+    margin-bottom: 12px;
+}
+
+.demoPanelTitle
+{
+    font-family: IBMBold, monospace;
+    color: var(--color-accent);
+}
+
+.demoPanelMeta
+{
+    font-family: IBMRegular, monospace;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    text-align: right;
+}
+
+.diagramWrap
+{
+    overflow-x: auto;
+    border: 1px solid rgba(121, 121, 121, 0.35);
+    background: rgba(17, 34, 110, 0.06);
+}
+
+.gridDiagram
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 760px;
+}
+
+.demoPanelCaption
+{
+    margin-top: 12px;
+    font-family: IBMRegular, monospace;
+    color: var(--color-text);
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: none;
+}
+
+.gridDiagram .gridStroke
+{
+    fill: var(--color-text-muted);
+}
+
+.gridDiagram .gridFrame
+{
+    fill: transparent;
+    stroke: rgba(121, 121, 121, 0.75);
+    stroke-width: 2;
+}
+
+.gridDiagram .gridContentArea
+{
+    fill: rgba(17, 34, 110, 0.10);
+    stroke: rgba(17, 34, 110, 0.7);
+    stroke-width: 2;
+}
+
+.gridDiagram .gridSafeArea
+{
+    fill: rgba(160, 20, 65, 0.08);
+    stroke: rgba(160, 20, 65, 0.8);
+    stroke-width: 2;
+    stroke-dasharray: 8 6;
+}
+
+.gridDiagram .gridColumns rect
+{
+    fill: rgba(192, 192, 193, 0.06);
+    stroke: rgba(121, 121, 121, 0.35);
+    stroke-width: 1;
+}
+
+.gridDiagram .gridModules rect
+{
+    fill: rgba(160, 20, 65, 0.22);
+    stroke: rgba(160, 20, 65, 0.85);
+    stroke-width: 2;
+}
+
+.gridDiagram .gridDimLine
+{
+    stroke: rgba(121, 121, 121, 0.9);
+    stroke-width: 2;
+}
+
+.gridDiagram .gridLabel
+{
+    fill: var(--color-text);
+    font-family: IBMRegular, monospace;
+    font-size: 16px;
+}
+
+.gridDiagram .gridLabelMuted
+{
+    fill: rgba(121, 121, 121, 0.95);
+}

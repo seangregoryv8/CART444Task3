@@ -38,19 +38,168 @@
         <section>
             <h4 class="pageCategory">FOUNDATION_MODULE_01</h4>
             <h1 class="pageTitle">grid<span>.mnl</span></h1>
-            <p>Our layout lives on a steady, print-shop grid--think graph paper, crop marks, and a calm rhythm that keeps every module aligned like it was set on a light table.</p>
+            <p>
+
+            </p>
         </section>
         <section>
             <h2 class="pageSubtitle">grid_structure<span>.wqec</span></h2>
-            <p>Use consistent columns and gutters so content snaps into place like type in a metal frame. Align edges, baselines, and key components to the same rails to avoid visual "wow &amp; flutter."</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>property</th>
+                        <th>purpose</th>
+                        <th>values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>columns</td>
+                        <td>number of columns in the grid</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>gutters</td>
+                        <td>spacing between columns</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td>margins</td>
+                        <td>spacing from the edge of the container</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td>safe_areas</td>
+                        <td>regions where content should be placed for optimal readability</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>max_content_width</td>
+                        <td>maximum width of the content area</td>
+                        <td>1200px</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">annotated_grid_demonstration<span>.demo</span></h2>
             <p>Show the rails: columns, gutters, margins, and safe areas--like tracing paper laid over a poster. Labels and measurements should feel like ruler ticks on a drafting board.</p>
+
+            <figure class="demoPanel" aria-label="Annotated grid demonstration">
+                <div class="demoPanelHeader">
+                    <p class="demoPanelTitle">grid_overlay<span>.svg</span></p>
+                    <p class="demoPanelMeta">12_col · gutter_24px · margin_24px · max_1200px</p>
+                </div>
+                <div class="diagramWrap" role="img" aria-label="Grid diagram showing margins, gutters, columns, content area, and safe area">
+                    <svg class="gridDiagram" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" class="gridStroke" />
+                            </marker>
+                        </defs>
+
+                        <!-- outer container -->
+                        <rect x="0" y="40" width="1200" height="160" class="gridFrame" />
+
+                        <!-- content area (max 1200px, margins included visually) -->
+                        <rect x="24" y="60" width="1152" height="120" class="gridContentArea" />
+
+                        <!-- safe area (10% inset of content area) -->
+                        <rect x="139" y="76" width="922" height="88" class="gridSafeArea" />
+
+                        <!-- 12 columns (74px) with 24px gutters -->
+                        <g class="gridColumns">
+                            <rect x="24"  y="60" width="74" height="120" />
+                            <rect x="122" y="60" width="74" height="120" />
+                            <rect x="220" y="60" width="74" height="120" />
+                            <rect x="318" y="60" width="74" height="120" />
+                            <rect x="416" y="60" width="74" height="120" />
+                            <rect x="514" y="60" width="74" height="120" />
+                            <rect x="612" y="60" width="74" height="120" />
+                            <rect x="710" y="60" width="74" height="120" />
+                            <rect x="808" y="60" width="74" height="120" />
+                            <rect x="906" y="60" width="74" height="120" />
+                            <rect x="1004" y="60" width="74" height="120" />
+                            <rect x="1102" y="60" width="74" height="120" />
+                        </g>
+
+                        <!-- example modules snapped to columns -->
+                        <g class="gridModules">
+                            <rect x="220" y="92" width="368" height="30" rx="4" ry="4" />
+                            <rect x="612" y="126" width="270" height="30" rx="4" ry="4" />
+                        </g>
+
+                        <!-- dimension lines -->
+                        <g class="gridDims">
+                            <!-- margin: 24px -->
+                            <line x1="0" y1="212" x2="24" y2="212" marker-start="url(#arrow)" marker-end="url(#arrow)" class="gridDimLine" />
+                            <text x="12" y="232" text-anchor="middle" class="gridLabel">24px</text>
+
+                            <!-- gutter: 24px -->
+                            <line x1="98" y1="212" x2="122" y2="212" marker-start="url(#arrow)" marker-end="url(#arrow)" class="gridDimLine" />
+                            <text x="110" y="232" text-anchor="middle" class="gridLabel">24px</text>
+
+                            <!-- column: 74px -->
+                            <line x1="220" y1="212" x2="294" y2="212" marker-start="url(#arrow)" marker-end="url(#arrow)" class="gridDimLine" />
+                            <text x="257" y="232" text-anchor="middle" class="gridLabel">74px</text>
+                        </g>
+
+                        <!-- callouts -->
+                        <g class="gridCallouts">
+                            <text x="600" y="28" text-anchor="middle" class="gridLabel">content_area (max 1200px)</text>
+                            <text x="600" y="196" text-anchor="middle" class="gridLabel">12-column grid · align modules to column edges</text>
+                            <text x="600" y="90" text-anchor="middle" class="gridLabel gridLabelMuted">safe_area (10% inset)</text>
+                        </g>
+                    </svg>
+                </div>
+                <figcaption class="demoPanelCaption">Use this overlay as a measuring tool: margins protect the edge, gutters keep rhythm, and columns are the repeatable slots that content snaps into.</figcaption>
+            </figure>
+
+            <table class="specTable" aria-label="Grid parts and measurements">
+                <thead>
+                    <tr>
+                        <th>part</th>
+                        <th>what it controls</th>
+                        <th>system value</th>
+                        <th>how to use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>margin</td>
+                        <td>breathing room between content and viewport edge</td>
+                        <td>24px (each side)</td>
+                        <td>keep long text and key UI inside; let only background bleed out</td>
+                    </tr>
+                    <tr>
+                        <td>gutter</td>
+                        <td>spacing between columns (the "channels")</td>
+                        <td>24px</td>
+                        <td>use to separate cards/blocks without inventing new spacing</td>
+                    </tr>
+                    <tr>
+                        <td>columns</td>
+                        <td>repeatable alignment rails</td>
+                        <td>12 columns</td>
+                        <td>snap modules to column edges; prefer spans of 3/4/6/12</td>
+                    </tr>
+                    <tr>
+                        <td>content_area</td>
+                        <td>maximum readable width for the layout</td>
+                        <td>1200px max</td>
+                        <td>center the layout; widen gutters before exceeding max width</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">responsive_behaviour<span>.resp</span></h2>
-            <p>As screens shrink and stretch, the grid reflows like a folded brochure: fewer columns, wider gutters, and stacked modules. Breaks should feel intentional--no awkward jumps, just clean "channel changes."</p>
+            <p>
+                As screens shrink and stretch, the grid reflows like a folded brochure: fewer columns, wider gutters, and
+                stacked modules. Breaks should feel intentional--no awkward jumps, just clean "channel changes."
+                Additionally, when switching to lower screens, the text should become bigger as to be more legible for the viewer,
+                especially with the effects to be added to give it the authentic feel.
+            </p>
         </section>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()"></div>
     </div>
