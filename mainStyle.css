@@ -6,6 +6,15 @@
     --color-accent: #a01441;
     --color-secondary: #24382c;
     --color-text-muted: #797979;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 48px;
+    --space-7: 64px;
+    --space-8: 96px;
 }
 
 *
@@ -393,4 +402,408 @@ tbody td:first-child
 .gridDiagram .gridLabelMuted
 {
     fill: rgba(121, 121, 121, 0.95);
+}
+
+/* Breakpoints diagram (used on types/breakpoints.html) */
+.breakpointDiagram
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 760px;
+}
+
+.breakpointDiagram .bpFrame
+{
+    fill: transparent;
+    stroke: rgba(121, 121, 121, 0.75);
+    stroke-width: 2;
+}
+
+.breakpointDiagram .bpRowRect
+{
+    fill: rgba(0, 0, 0, 0.16);
+    stroke: rgba(121, 121, 121, 0.35);
+    stroke-width: 1;
+}
+
+.breakpointDiagram .bpTitle
+{
+    fill: var(--color-primary);
+    font-family: IBMSemiBold, monospace;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+}
+
+.breakpointDiagram .bpLegend
+{
+    fill: var(--color-text-muted);
+    font-family: IBMRegular, monospace;
+    font-size: 14px;
+}
+
+.breakpointDiagram .bpName
+{
+    fill: var(--color-link);
+    font-family: IBMSemiBold, monospace;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+}
+
+.breakpointDiagram .bpMeta
+{
+    fill: var(--color-text);
+    font-family: IBMRegular, monospace;
+    font-size: 16px;
+}
+
+/* Breakpoint ruler (used on types/breakpoints.html) */
+.breakpointWrap
+{
+    padding: 14px;
+}
+
+.breakpointsRuler
+{
+    position: relative;
+    height: 34px;
+    border-bottom: 1px dashed rgba(121, 121, 121, 0.55);
+}
+
+.bpMarker
+{
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.bpMarker::after
+{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    width: 1px;
+    height: 14px;
+    background: rgba(160, 20, 65, 0.85);
+    transform: translateX(-50%);
+}
+
+.bp0 { left: 0%; transform: none; }
+.bp0::after { left: 0; transform: none; }
+.bp600 { left: 24.25%; }
+.bp768 { left: 35.1%; }
+.bp1024 { left: 46.7%; }
+.bp1280 { left: 58.3%; }
+.bp1440 { left: 69.2%; }
+.bp1920 { left: 89%; }
+.bp1920more { left: 100%; }
+
+.bp1920more { transform: translateX(-100%); }
+.bp1920more::after { left: 100%; transform: translateX(-100%); }
+
+.bpTag
+{
+    display: inline-block;
+    font-family: IBMRegular, monospace;
+    font-size: 12px;
+    color: var(--color-text);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(121, 121, 121, 0.45);
+    padding: 3px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.06em;
+}
+
+.breakpointBand
+{
+    display: flex;
+    margin-top: 14px;
+    border: 1px solid rgba(121, 121, 121, 0.35);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.bpSegment
+{
+    padding: 10px 10px 12px;
+    border-right: 1px solid rgba(121, 121, 121, 0.25);
+    min-width: 100px;
+}
+
+.bpSegment:last-child
+{
+    border-right: none;
+}
+
+.bpMobile { flex: 600; background: rgba(160, 20, 65, 0.08); }
+.bpMobileH { flex: 168; background: rgba(17, 34, 110, 0.08); }
+.bpTablet { flex: 256; background: rgba(160, 20, 65, 0.06); }
+.bpTabletH { flex: 256; background: rgba(17, 34, 110, 0.06); }
+.bpCrt { flex: 160; background: rgba(160, 20, 65, 0.05); }
+.bpDesktop { flex: 480; background: rgba(17, 34, 110, 0.05); }
+.bpWide { flex: 240; background: rgba(160, 20, 65, 0.04); }
+
+.bpSegment .bpName
+{
+    font-family: IBMSemiBold, monospace;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+    color: var(--color-link);
+    max-width: none;
+    margin-bottom: 6px;
+}
+
+.bpSegment .bpMeta
+{
+    font-family: IBMRegular, monospace;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+    max-width: none;
+}
+
+.contentClampRow
+{
+    margin-top: 14px;
+    display: grid;
+    gap: 10px;
+}
+
+.clampLabel
+{
+    font-family: IBMRegular, monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    text-transform: lowercase;
+}
+
+.clampBars
+{
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.clampBar
+{
+    position: relative;
+    border: 1px solid rgba(121, 121, 121, 0.35);
+    background: rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    min-height: 38px;
+}
+
+.clampMin { flex: 272; }
+.clampMax { flex: 1200; }
+
+.clampBar span
+{
+    font-family: IBMRegular, monospace;
+    font-size: 12px;
+    color: var(--color-text);
+    letter-spacing: 0.04em;
+}
+
+/* Spacing demos (used on types/spacing.html) */
+.demoRow
+{
+    width: min(100%, 980px);
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+@media (max-width: 980px)
+{
+    .demoRow
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.spacingScaleGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.spacingSwatch
+{
+    border: 1px solid rgba(121, 121, 121, 0.45);
+    background: rgba(0, 0, 0, 0.20);
+    padding: 10px 10px 12px;
+}
+
+.spacingLabel
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: none;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+}
+
+.spacingLabel span
+{
+    font-size: 12px;
+    color: var(--color-text);
+}
+
+.spacingBar
+{
+    height: 18px;
+    width: min(100%, calc(var(--space) * 4));
+    border: 1px solid rgba(160, 20, 65, 0.85);
+    background: rgba(160, 20, 65, 0.22);
+    box-shadow: 0 0 0 1px rgba(17, 34, 110, 0.25) inset;
+}
+
+.componentShowcase *
+{
+    padding: 0;
+}
+
+.componentStage
+{
+    position: relative;
+    border: 1px solid rgba(121, 121, 121, 0.35);
+    background: rgba(17, 34, 110, 0.06);
+    padding: 20px;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dsButton
+{
+    appearance: none;
+    border: 1px solid rgba(121, 121, 121, 0.75);
+    background: rgba(0, 0, 0, 0.28);
+    color: var(--color-text);
+    font-family: IBMSemiBold, monospace;
+    text-transform: lowercase;
+    letter-spacing: 0.06em;
+    padding: 10px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba(160, 20, 65, 0.25) inset;
+}
+
+.dsButton:hover
+{
+    border-color: rgba(160, 20, 65, 0.85);
+}
+
+.dsButton:active
+{
+    transform: translateY(1px);
+}
+
+.dsButtonIcon
+{
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(17, 34, 110, 0.9);
+    background: rgba(17, 34, 110, 0.25);
+}
+
+.dsButtonKbd
+{
+    font-family: IBMRegular, monospace;
+    color: var(--color-text-muted);
+    border: 1px dashed rgba(121, 121, 121, 0.65);
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+}
+
+.padGuide
+{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: 1px dashed rgba(160, 20, 65, 0.35);
+    opacity: 0.85;
+}
+
+.padGuideX
+{
+    left: 16px;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px dashed rgba(160, 20, 65, 0.55);
+    border-right: 1px dashed rgba(160, 20, 65, 0.55);
+    border-top: none;
+    border-bottom: none;
+}
+
+.padGuideY
+{
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed rgba(160, 20, 65, 0.55);
+    border-bottom: 1px dashed rgba(160, 20, 65, 0.55);
+    border-left: none;
+    border-right: none;
+}
+
+.measure
+{
+    position: absolute;
+    font-family: IBMRegular, monospace;
+    font-size: 12px;
+    color: var(--color-text);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(121, 121, 121, 0.45);
+    padding: 4px 6px;
+    text-transform: lowercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.measureTop
+{
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.measureLeft
+{
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left top;
+}
+
+.measureGap
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 34px);
+}
+
+.componentNote
+{
+    margin-top: 12px;
+    font-size: 16px;
+    max-width: none;
+    color: var(--color-text);
 }

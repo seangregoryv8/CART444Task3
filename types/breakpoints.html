@@ -42,11 +42,118 @@
         </section>
         <section>
             <h2 class="pageSubtitle">responsive_breakpoint_ranges<span>.set</span></h2>
-            <p>Define a small set of ranges (mobile, tablet, desktop, wide) and design for the edges. If it works at the boundaries, it will feel steady everywhere in between.</p>
+            <p>This system uses 7 predefined ranges. As the screen grows, it supports more columns, wider areas, and easier readability within deeper threads. In smaller regions, it provides a more focused experience.</p>
+
+            <figure class="demoPanel" aria-label="Breakpoint ruler demonstration">
+                <div class="demoPanelHeader">
+                    <p class="demoPanelTitle">breakpoint_ruler<span>.demo</span></p>
+                    <p class="demoPanelMeta">7_layouts · cutoffs + columns + content width</p>
+                </div>
+
+                <div class="diagramWrap breakpointWrap" role="img" aria-label="Breakpoint ruler showing cutoff widths, layout columns, and content width clamp">
+                    <div class="breakpointsRuler" aria-hidden="true">
+                        <div class="bpMarker bp0"><span class="bpTag">0</span></div>
+                        <div class="bpMarker bp600"><span class="bpTag">600</span></div>
+                        <div class="bpMarker bp768"><span class="bpTag">768</span></div>
+                        <div class="bpMarker bp1024"><span class="bpTag">1024</span></div>
+                        <div class="bpMarker bp1280"><span class="bpTag">1280</span></div>
+                        <div class="bpMarker bp1440"><span class="bpTag">1440</span></div>
+                        <div class="bpMarker bp1920"><span class="bpTag">1920</span></div>
+                        <div class="bpMarker bp1920more"><span class="bpTag">1920+</span></div>
+                    </div>
+
+                    <div class="breakpointBand" aria-label="Breakpoint ranges">
+                        <div class="bpSegment bpMobile">
+                            <p class="bpName">mobile</p>
+                        </div>
+                        <div class="bpSegment bpMobileH">
+                            <p class="bpName">mobile_h</p>
+                        </div>
+                        <div class="bpSegment bpTablet">
+                            <p class="bpName">tablet</p>
+                        </div>
+                        <div class="bpSegment bpTabletH">
+                            <p class="bpName">tablet_h</p>
+                        </div>
+                        <div class="bpSegment bpCrt">
+                            <p class="bpName">crt</p>
+                        </div>
+                        <div class="bpSegment bpDesktop">
+                            <p class="bpName">desktop</p>
+                        </div>
+                        <div class="bpSegment bpWide">
+                            <p class="bpName">wide</p>
+                        </div>
+                    </div>
+
+                    <div class="contentClampRow" aria-label="Content width clamp">
+                        <div class="clampLabel">content_width = min(viewport - 48px, 1200px)</div>
+                        <div class="clampBars" aria-hidden="true">
+                            <div class="clampBar clampMin"><span>min 272px @ 320px</span></div>
+                            <div class="clampBar clampMax"><span>max 1200px clamp</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <figcaption class="demoPanelCaption">This ruler is the switchboard. Use cutoffs to choose a layout, then keep content width stable by clamping at 1200px (with 24px margins on each side).</figcaption>
+            </figure>
         </section>
         <section>
             <h2 class="pageSubtitle">breakpoint_behaviour<span>.att</span></h2>
-            <p>At each breakpoint, change layout structure--not the entire visual language. Typography and spacing should adjust subtly, like a typesetter tightening leading, not rewriting the page.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>range</th>
+                        <th>viewport (in px)</th>
+                        <th>grid_behaviour</th>
+                        <th>layout_use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>mobile</td>
+                        <td>0 - 599</td>
+                        <td>1 column</td>
+                        <td>primary content only</td>
+                    </tr>
+                    <tr>
+                        <td>mobile (horizontal)</td>
+                        <td>600 - 767</td>
+                        <td>1 column</td>
+                        <td>primary content only</td>
+                    </tr>
+                    <tr>
+                        <td>tablet</td>
+                        <td>768 - 1023</td>
+                        <td>2 columns</td>
+                        <td>primary and secondary content</td>
+                    </tr>
+                    <tr>
+                        <td>tablet (horizontal)</td>
+                        <td>1024 - 1279</td>
+                        <td>2 columns</td>
+                        <td>primary and secondary content</td>
+                    </tr>
+                    <tr>
+                        <td>CRT_monitor</td>
+                        <td>1280 - 1439</td>
+                        <td>2 columns</td>
+                        <td>primary and secondary content</td>
+                    </tr>
+                    <tr>
+                        <td>desktop</td>
+                        <td>1440 - 1919</td>
+                        <td>3 columns</td>
+                        <td>primary, secondary, and tertiary content</td>
+                    </tr>
+                    <tr>
+                        <td>wide</td>
+                        <td>1920+</td>
+                        <td>4 columns</td>
+                        <td>all content types</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
             <h2 class="pageSubtitle">implementation_logic<span>.log</span></h2>

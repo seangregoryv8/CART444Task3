@@ -38,19 +38,142 @@
         <section>
             <h4 class="pageCategory">FOUNDATION_MODULE_02</h4>
             <h1 class="pageTitle">spacing<span>.maa</span></h1>
-            <p>Spacing is our tempo knob. Turn it with restraint and the interface reads like a well-spaced zine--airy where it needs to breathe, tight where it needs to click.</p>
+            <p>Spacing is the distance between elements, aiding in readability, allowing for a balanced composition. This system uses a consistent spacing scale to organize content within components, between content groups, and across full page layouts.</p>
         </section>
         <section>
             <h2 class="pageSubtitle">spacing_scale<span>.maa</span></h2>
-            <p>Pick a single cadence (like 4 or 8) and treat it like the tick marks on a ruler. Every gap should land on that beat so the layout never drifts off rhythm.</p>
+            <p>
+                This system uses a spacing scale with a consistent ratio to create a harmonious rhythm across the interface. Each step in the scale is designed to work well with the others, making it easy to choose appropriate spacing for any situation without needing to guess or eyeball measurements.
+            </p>
         </section>
         <section>
             <h2 class="pageSubtitle">applied_spacing_in_components<span>.demo</span></h2>
             <p>Buttons, cards, and lists should share the same internal padding so they feel cut from the same sheet. Use larger steps between sections and smaller steps inside components to keep hierarchy crisp.</p>
+
+            <div class="demoRow" aria-label="Spacing scale and button spacing demonstration">
+                <figure class="demoPanel" aria-label="Spacing scale grid example">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">spacing_scale_grid<span>.demo</span></p>
+                        <p class="demoPanelMeta">cadence_4px · tokens_s1-s8</p>
+                    </div>
+
+                    <div class="spacingScaleGrid" role="list" aria-label="Spacing scale swatches">
+                        <div class="spacingSwatch" role="listitem" style="--space:4px;">
+                            <p class="spacingLabel">s1<span>4px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                        <div class="spacingSwatch" role="listitem" style="--space:8px;">
+                            <p class="spacingLabel">s2<span>8px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                        <div class="spacingSwatch" role="listitem" style="--space:16px;">
+                            <p class="spacingLabel">s3<span>16px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                        <div class="spacingSwatch" role="listitem" style="--space:24px;">
+                            <p class="spacingLabel">s4<span>24px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                        <div class="spacingSwatch" role="listitem" style="--space:32px;">
+                            <p class="spacingLabel">s5<span>32px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                        <div class="spacingSwatch" role="listitem" style="--space:48px;">
+                            <p class="spacingLabel">s6<span>48px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                        <div class="spacingSwatch" role="listitem" style="--space:64px;">
+                            <p class="spacingLabel">s7<span>64px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                        <div class="spacingSwatch" role="listitem" style="--space:96px;">
+                            <p class="spacingLabel">s8<span>96px</span></p>
+                            <div class="spacingBar" aria-hidden="true"></div>
+                        </div>
+                    </div>
+
+                    <figcaption class="demoPanelCaption">Each step is a labeled dial. When you need a gap, pick the nearest token—don’t eyeball it.</figcaption>
+                </figure>
+
+                <figure class="demoPanel" aria-label="Button spacing and padding example">
+                    <div class="demoPanelHeader">
+                        <p class="demoPanelTitle">button_spacing_anatomy<span>.demo</span></p>
+                        <p class="demoPanelMeta">P = padding, G = gap</p>
+                    </div>
+
+                    <div class="componentShowcase" aria-label="Fabricated button showing padding and internal spacing">
+                        <div class="componentStage">
+                            <div class="padGuide padGuideX" aria-hidden="true"></div>
+                            <div class="padGuide padGuideY" aria-hidden="true"></div>
+
+                            <button class="dsButton" type="button">
+                                <span class="dsButtonIcon" aria-hidden="true"></span>
+                                <span class="dsButtonText">button</span>
+                                <span class="dsButtonKbd" aria-hidden="true">⌁</span>
+                            </button>
+
+                            <div class="measure measureTop" aria-hidden="true">P_y 10px</div>
+                            <div class="measure measureLeft" aria-hidden="true">P_x 16px</div>
+                            <div class="measure measureGap" aria-hidden="true">G 8px</div>
+                        </div>
+                        <p class="componentNote">The label, icon, and hint snap together with a fixed gap. Padding is the protective casing.</p>
+                    </div>
+                </figure>
+            </div>
         </section>
         <section>
             <h2 class="pageSubtitle">spacing_tokens<span>.tok</span></h2>
-            <p>Name spacing like labeled dials: xs, sm, md, lg--or s1, s2, s3. Tokens keep the system consistent even when the layout gets remixed.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>token</th>
+                        <th>value</th>
+                        <th>usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--space-1</code></td>
+                        <td>4px</td>
+                        <td>tight gaps, like between buttons in a button group</td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-2</code></td>
+                        <td>8px</td>
+                        <td>default gap between items in a list or card</td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-3</code></td>
+                        <td>16px</td>
+                        <td>default padding inside components like cards and buttons</td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-4</code></td>
+                        <td>24px</td>
+                        <td>section breaks within a page or component</td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-5</code></td>
+                        <td>32px</td>
+                        <td>default gap between sections on a page</td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-6</code></td>
+                        <td>48px</td>
+                        <td>large gaps between major sections on a page</td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-7</code></td>
+                        <td>64px</td>
+                        <td>used sparingly for very large gaps, like between the header and body of a page</td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-8</code></td>
+                        <td>96px</td>
+                        <td>used very sparingly for extra large gaps, like between the main content and footer of a page</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
