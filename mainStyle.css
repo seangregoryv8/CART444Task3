@@ -1369,3 +1369,23 @@ pre
     background-color: var(--color-accent);
     border-radius: 10px;
 }
+.img-entry {
+    border: 1px solid #000;
+    padding: 8px;
+    display: inline-block;
+    background: var(--color-primary);
+}
+
+.img-label {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.img-entry img {
+    max-width: 800px;
+    image-rendering: pixelated;
+    filter: contrast(150%) brightness(90%);
+}
+.img-entry img:hover {
+    filter: invert(100%) contrast(200%);
+}
