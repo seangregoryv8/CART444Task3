@@ -28,6 +28,28 @@
     --layer-content: 10;
     --layer-elevated: 100;
     --layer-overlay: 1000;
+
+    --font-display: 'Vhs', sans-serif;
+    --font-mono: IBMRegular, monospace;
+    --font-mono-semibold: IBMSemiBold, monospace;
+    --font-mono-bold: IBMBold, monospace;
+
+    --text-display: 60px;
+    --text-headline: 40px;
+    --text-category: 20px;
+    --text-body: 18px;
+    --text-label: 14px;
+
+    --lh-body: 1.5;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-pill: 999px;
+
+    --panel-bg: rgba(0, 0, 0, 0.22);
+    --panel-bg-soft: rgba(0, 0, 0, 0.18);
+    --panel-bg-blue: rgba(17, 34, 110, 0.06);
 }
 
 *
@@ -78,7 +100,7 @@ body *
 .checklist p
 {
     color: var(--color-text-muted);
-    font-size: 14px;
+    font-size: var(--text-label);
 }
 
 .mainContent
@@ -92,40 +114,40 @@ body *
 
 h1, h2, h4
 {
-    font-family: 'Vhs', sans-serif;
+    font-family: var(--font-display);
     color: var(--color-primary);
 }
 
 p
 {
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     color: var(--color-text);
     max-width: 780px;
-    line-height: 1.5;
-    font-size: 18px;
+    line-height: var(--lh-body);
+    font-size: var(--text-body);
 }
 
 a
 {
-    font-family: IBMSemiBold, monospace;
+    font-family: var(--font-mono-semibold);
     color: var(--color-primary);
 }
 
 h1
 {
-    font-size: 60px;
+    font-size: var(--text-display);
     margin-top: 50px;
 }
 
 h2
 {
-    font-size: 40px;
+    font-size: var(--text-headline);
     margin-top: 50px;
 }
 
 h4
 {
-    font-size: 20px;
+    font-size: var(--text-category);
     color: var(--color-accent);
 }
 
@@ -133,6 +155,26 @@ span
 {
     font-size: 75%;
     color: var(--color-text-muted);
+}
+
+pre
+{
+    width: min(100%, 980px);
+    margin-top: 18px;
+    border: 1px solid rgba(121, 121, 121, 0.55);
+    background: var(--panel-bg);
+    padding: 14px 16px;
+    overflow: auto;
+}
+
+pre code
+{
+    display: block;
+    white-space: pre;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text);
 }
 
 .indexTitle
@@ -146,7 +188,7 @@ span
 a p
 {
     color: var(--color-accent);
-    font-family: IBMBold, monospace;
+    font-family: var(--font-mono-bold);
 }
 /* VHS Font */
 @font-face
@@ -256,12 +298,12 @@ table
     padding: 0;
     border-collapse: collapse;
     border: 1px solid var(--color-text-muted);
-    background: rgba(0, 0, 0, 0.18);
+    background: var(--panel-bg-soft);
 }
 
 thead th
 {
-    font-family: IBMSemiBold, monospace;
+    font-family: var(--font-mono-semibold);
     text-transform: lowercase;
     letter-spacing: 0.05em;
     color: var(--color-primary);
@@ -274,7 +316,7 @@ th, td
     padding: 10px 12px;
     text-align: left;
     vertical-align: top;
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     color: var(--color-text);
 }
 
@@ -290,7 +332,7 @@ tbody tr:nth-child(even)
 
 tbody td:first-child
 {
-    font-family: IBMSemiBold, monospace;
+    font-family: var(--font-mono-semibold);
     color: var(--color-text);
     white-space: nowrap;
 }
@@ -301,7 +343,7 @@ tbody td:first-child
     width: min(100%, 980px);
     margin-top: 22px;
     border: 1px solid var(--color-text-muted);
-    background: rgba(0, 0, 0, 0.22);
+    background: var(--panel-bg);
     padding: 14px 14px 12px;
 }
 
@@ -323,13 +365,13 @@ tbody td:first-child
 
 .demoPanelTitle
 {
-    font-family: IBMBold, monospace;
+    font-family: var(--font-mono-bold);
     color: var(--color-accent);
 }
 
 .demoPanelMeta
 {
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     color: var(--color-text-muted);
     font-size: 14px;
     text-align: right;
@@ -339,7 +381,7 @@ tbody td:first-child
 {
     overflow-x: auto;
     border: 1px solid rgba(121, 121, 121, 0.35);
-    background: rgba(17, 34, 110, 0.06);
+    background: var(--panel-bg-blue);
 }
 
 .gridDiagram
@@ -353,7 +395,7 @@ tbody td:first-child
 .demoPanelCaption
 {
     margin-top: 12px;
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     color: var(--color-text);
     font-size: 16px;
     line-height: 1.5;
@@ -761,13 +803,13 @@ tbody td:first-child
 
 .layerChip
 {
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     font-size: 12px;
     color: var(--color-text);
     background: rgba(0, 0, 0, 0.45);
     border: 1px dashed rgba(121, 121, 121, 0.55);
     padding: 4px 8px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     letter-spacing: 0.04em;
     max-width: none;
 }
@@ -781,14 +823,14 @@ tbody td:first-child
     align-items: center;
     padding: 12px;
     border: 1px solid rgba(121, 121, 121, 0.35);
-    background: rgba(0, 0, 0, 0.18);
+    background: var(--panel-bg-soft);
 }
 
 .swatchChip
 {
     width: 56px;
     height: 56px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     background: var(--swatch);
     border: 1px solid rgba(192, 192, 193, 0.35);
     box-shadow:
@@ -798,7 +840,7 @@ tbody td:first-child
 
 .swatchHex
 {
-    font-family: IBMSemiBold, monospace;
+    font-family: var(--font-mono-semibold);
     font-size: 14px;
     letter-spacing: 0.06em;
     color: var(--color-text);
@@ -807,7 +849,7 @@ tbody td:first-child
 
 .swatchUse
 {
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     font-size: 14px;
     color: var(--color-text-muted);
     max-width: none;
@@ -964,7 +1006,7 @@ tbody td:first-child
 .ratioNote
 {
     margin-top: 10px;
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     font-size: 14px;
     color: var(--color-text-muted);
     letter-spacing: 0.04em;
@@ -992,7 +1034,7 @@ tbody td:first-child
 .iconTile
 {
     border: 1px solid rgba(121, 121, 121, 0.35);
-    background: rgba(0, 0, 0, 0.18);
+    background: var(--panel-bg-soft);
     padding: 12px;
     display: grid;
     gap: 8px;
@@ -1013,7 +1055,7 @@ tbody td:first-child
 
 .iconName
 {
-    font-family: IBMSemiBold, monospace;
+    font-family: var(--font-mono-semibold);
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: lowercase;
@@ -1023,7 +1065,7 @@ tbody td:first-child
 
 .iconCoords
 {
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     font-size: 12px;
     color: var(--color-text-muted);
     max-width: none;
@@ -1047,7 +1089,7 @@ tbody td:first-child
 .iconExampleNote
 {
     margin-top: 12px;
-    font-family: IBMRegular, monospace;
+    font-family: var(--font-mono);
     font-size: 14px;
     color: var(--color-text-muted);
     max-width: none;
@@ -1308,4 +1350,10 @@ tbody td:first-child
     font-size: 16px;
     max-width: none;
     color: var(--color-text);
+}
+
+pre
+{
+    background-color: var(--color-accent);
+    border-radius: 10px;
 }

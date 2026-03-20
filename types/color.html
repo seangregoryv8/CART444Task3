@@ -207,6 +207,24 @@
                 </div>
             </div>
         </section>
+        <section>
+            <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
+            <p>Use role tokens (not raw hex) in components. Theme changes become a token swap instead of a rewrite.</p>
+            <pre><code>:root {
+  --color-background: #0D0D0F;
+  --color-secondary: #24382c;
+  --color-primary: #11226e;
+  --color-accent: #a01441;
+  --color-text: #c0c0c1;
+  --color-text-muted: #797979;
+  --color-link: #c0c0cc;
+}
+
+body { background: var(--color-background); color: var(--color-text); }
+.sideBar { background: var(--color-secondary); }
+h1, h2 { color: var(--color-primary); }
+.isActive { color: var(--color-accent); }</code></pre>
+        </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
     </div>

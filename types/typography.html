@@ -193,6 +193,23 @@
                 </tbody>
             </table>
         </section>
+        <section>
+            <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
+            <p>Typography is token-driven: one display font, one mono body font, and a small role-based scale.</p>
+            <pre><code>:root {
+  --font-display: 'Vhs', sans-serif;
+  --font-mono: IBMRegular, monospace;
+
+  --text-display: 60px;
+  --text-headline: 40px;
+  --text-category: 20px;
+  --text-body: 18px;
+  --lh-body: 1.5;
+}
+
+h1, h2, h4 { font-family: var(--font-display); }
+p { font-family: var(--font-mono); font-size: var(--text-body); line-height: var(--lh-body); }</code></pre>
+        </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
     </div>

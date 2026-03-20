@@ -161,6 +161,27 @@
                 </tbody>
             </table>
         </section>
+        <section>
+            <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
+            <p>Keep layering predictable by using z-index tokens. Avoid random values like <code>9999</code>; reserve overlays for true focus states.</p>
+            <pre><code>:root {
+  --layer-base: 0;
+  --layer-content: 10;
+  --layer-elevated: 100;
+  --layer-overlay: 1000;
+}
+
+.card {
+  position: relative;
+  z-index: var(--layer-elevated);
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--layer-overlay);
+}</code></pre>
+        </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
     </div>

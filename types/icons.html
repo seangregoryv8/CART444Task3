@@ -282,6 +282,23 @@
             <h2 class="pageSubtitle">icon_accessibility<span>.acc</span></h2>
             <p>Provide text alternatives (visible labels or aria-label), keep tap targets generous, and maintain contrast. If it's not readable on a dim CRT, it's not readable.</p>
         </section>
+        <section>
+            <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
+            <p>Icons are pulled from a sprite sheet by setting <code>--x</code> and <code>--y</code> per glyph. Create semantic classes that map to coordinates.</p>
+            <pre><code>/* base sprite */
+.icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('media.png');
+  background-size: 128px 160px; /* 4 cols x 5 rows */
+  background-position: calc(var(--x) * -32px) calc(var(--y) * -32px);
+  image-rendering: pixelated;
+}
+
+/* semantic mapping */
+.ic-search { --x: 2; --y: 2; }
+.ic-settings { --x: 2; --y: 3; }</code></pre>
+        </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
     </div>
