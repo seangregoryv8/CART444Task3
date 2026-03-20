@@ -21,6 +21,7 @@
             <nav class="checklist" aria-label="Foundation">
                 <p>overview.all</p>
                 <a href="../index.html" aria-current="page">home<span>.brd</span></a>
+                <a href="../philosophy.html">philosophy<span>.pla</span></a>
                 <br>
                 <p>foundation (1).col</p>
                 <a href="grid.html">grid_system<span>.mnl</span></a>
@@ -285,14 +286,15 @@
         <section>
             <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
             <p>Icons are pulled from a sprite sheet by setting <code>--x</code> and <code>--y</code> per glyph. Create semantic classes that map to coordinates.</p>
-            <pre><code>/* base sprite */
-.icon {
-  width: 32px;
-  height: 32px;
-  background-image: url('media.png');
-  background-size: 128px 160px; /* 4 cols x 5 rows */
-  background-position: calc(var(--x) * -32px) calc(var(--y) * -32px);
-  image-rendering: pixelated;
+            <pre><code>/* our sprite base */
+.icon
+{
+    width: 32px;
+    height: 32px;
+    background-image: url('media.png');
+    background-size: 128px 160px; /* 4 cols x 5 rows */
+    background-position: calc(var(--x) * -32px) calc(var(--y) * -32px);
+    image-rendering: pixelated;
 }
 
 /* semantic mapping */

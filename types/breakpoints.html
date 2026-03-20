@@ -21,6 +21,7 @@
             <nav class="checklist" aria-label="Foundation">
                 <p>overview.all</p>
                 <a href="../index.html" aria-current="page">home<span>.brd</span></a>
+                <a href="../philosophy.html">philosophy<span>.pla</span></a>
                 <br>
                 <p>foundation (1).col</p>
                 <a href="grid.html">grid_system<span>.mnl</span></a>
@@ -162,27 +163,26 @@
         <section>
             <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
             <p>Use the breakpoint tokens to gate layout changes. Keep the number of breakpoints small and reuse the same names everywhere.</p>
-            <pre><code>:root {
-  --bp-mobile: 600px;
-  --bp-tablet: 768px;
-  --bp-tabletH: 1024px;
-  --bp-crt: 1280px;
-  --bp-desktop: 1440px;
-  --bp-wide: 1920px;
+            <pre><code>:root
+{
+    --bp-mobile: 600px;
+    --bp-tablet: 768px;
+    --bp-tabletH: 1024px;
+    --bp-crt: 1280px;
+    --bp-desktop: 1440px;
+    --bp-wide: 1920px;
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: 1fr;
+.layout
+{
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-@media (min-width: var(--bp-tablet)) {
-  .layout { grid-template-columns: 1fr 1fr; }
-}
+@media (min-width: var(--bp-tablet)) { .layout { grid-template-columns: 1fr 1fr; } }
 
-@media (min-width: var(--bp-desktop)) {
-  .layout { grid-template-columns: 1fr 1fr 1fr; }
-}</code></pre>
+@media (min-width: var(--bp-desktop)) { .layout { grid-template-columns: 1fr 1fr 1fr; } }
+</code></pre>
         </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>

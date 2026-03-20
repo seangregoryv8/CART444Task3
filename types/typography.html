@@ -21,6 +21,7 @@
             <nav class="checklist" aria-label="Foundation">
                 <p>overview.all</p>
                 <a href="../index.html" aria-current="page">home<span>.brd</span></a>
+                <a href="../philosophy.html">philosophy<span>.pla</span></a>
                 <br>
                 <p>foundation (1).col</p>
                 <a href="grid.html">grid_system<span>.mnl</span></a>
@@ -196,15 +197,16 @@
         <section>
             <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
             <p>Typography is token-driven: one display font, one mono body font, and a small role-based scale.</p>
-            <pre><code>:root {
-  --font-display: 'Vhs', sans-serif;
-  --font-mono: IBMRegular, monospace;
+            <pre><code>:root
+{
+    --font-display: 'Vhs', sans-serif;
+    --font-mono: IBMRegular, monospace;
 
-  --text-display: 60px;
-  --text-headline: 40px;
-  --text-category: 20px;
-  --text-body: 18px;
-  --lh-body: 1.5;
+    --text-display: 60px;
+    --text-headline: 40px;
+    --text-category: 20px;
+    --text-body: 18px;
+    --lh-body: 1.5;
 }
 
 h1, h2, h4 { font-family: var(--font-display); }

@@ -265,9 +265,13 @@ a p
     image-rendering: crisp-edges;
 }
 
-.light-mode {
+.light-mode
+{
     --color-background: #ffffff;
     --color-text: #0D0D0F;
+    --color-link: #3a3a3a;
+    --color-text-muted: #1d0f0f;
+    --color-secondary: #64a07c;
 }
 
 .lightDarkToggle
@@ -309,6 +313,12 @@ thead th
     color: var(--color-primary);
     background: rgba(17, 34, 110, 0.14);
     border-bottom: 1px solid var(--color-text-muted);
+}
+
+.iconName
+{
+    color: var(--color-link);
+    
 }
 
 th, td
@@ -1061,6 +1071,7 @@ tbody td:first-child
     text-transform: lowercase;
     color: var(--color-link);
     max-width: none;
+    padding-top: 10px;
 }
 
 .iconCoords

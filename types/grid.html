@@ -21,6 +21,7 @@
             <nav class="checklist" aria-label="Foundation">
                 <p>overview.all</p>
                 <a href="../index.html" aria-current="page">home<span>.brd</span></a>
+                <a href="../philosophy.html">philosophy<span>.pla</span></a>
                 <br>
                 <p>foundation (1).col</p>
                 <a href="grid.html" aria-current="page">grid_system<span>.mnl</span></a>
@@ -204,20 +205,23 @@
         <section>
             <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
             <p>Implement the grid with tokens (spacing + max width) and keep module spans consistent. Use gaps for gutters and padding for margins.</p>
-            <pre><code>:root {
-  --space-4: 24px;
+            <pre><code>:root
+{
+    --space-4: 24px;
 }
 
-.layout {
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: var(--space-4); /* margins */
+.layout
+{
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--space-4); /* margins */
 }
 
-.grid12 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--space-4); /* gutters */
+.grid12
+{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-4); /* gutters */
 }
 
 .span-6 { grid-column: span 6; }

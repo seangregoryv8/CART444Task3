@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy | Foundation</title>
+    <link rel="stylesheet" href="mainStyle.css?v=20260316">
+    <link rel="stylesheet" href="shader.css">
+</head>
+<body class="crt">
+    <div class="scanlines"></div>
+    <div class="scanline"></div>
+    <div class="flicker"></div>
+    <aside class="sideBar" style="grid-column: 1;">
+        <div class="sideBarHeader">
+            <a class="indexTitle" href="index.html">
+                <p>CART_444</p>
+                <p>sean_gregory</p>
+                <p>design_systems</p>
+            </a>
+            <nav class="checklist" aria-label="Foundation">
+                <p>overview.all</p>
+                <a href="index.html">home<span>.brd</span></a>
+                <a href="philosophy.html" aria-current="page">philosophy<span>.pla</span></a>
+                <br>
+                <p>foundation (1).col</p>
+                <a href="types/grid.html">grid_system<span>.mnl</span></a>
+                <a href="types/spacing.html">spacing_scale<span>.maa</span></a>
+                <a href="types/breakpoints.html">breakpoints<span>.log</span></a>
+                <a href="types/layers.html">layer_stack<span>.str</span></a>
+                <a href="types/color.html">colour_palette<span>.sig</span></a>
+                <a href="types/typography.html">typography_specimen<span>.typ</span></a>
+                <a href="types/ratios.html">image_ratios<span>.fra</span></a>
+                <a href="types/icons.html">icon_library<span>.sym</span></a>
+            </nav>
+        </div>
+    </aside>
+    <div class="mainContent" style="grid-column: 2;">
+        <section>
+            <h4 class="pageCategory">SYSTEM_PHILOSOPHY_00</h4>
+            <h1 class="pageTitle">philosophy<span>.pla</span></h1>
+            <p>This system is a deliberate throwback: a UI that feels like switching on a CRT monitor and watching an old machine come to life. The goal isn’t “vintage for vintage’s sake”—it’s a disciplined, repeatable spec that stays readable even under scanlines, flicker, and noise.</p>
+        </section>
+
+        <section>
+            <h2 class="pageSubtitle">guiding_philosophy<span>.gde</span></h2>
+            <p>Everything is tuned like a signal chain: you don’t add knobs unless you can explain what they control. Tokens keep the knobs labeled, and each foundation page documents the rules, the demo, and the CSS implementation.</p>
+            <table aria-label="Guiding philosophy table">
+                <thead>
+                    <tr>
+                        <th>principle</th>
+                        <th>what it means in practice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>legibility first</td>
+                        <td>large base text, strong contrast, short line lengths; effects must never destroy readability</td>
+                    </tr>
+                    <tr>
+                        <td>consistency by tokens</td>
+                        <td>use <code>:root</code> variables for colour, spacing, breakpoints, layers, and type scale</td>
+                    </tr>
+                    <tr>
+                        <td>hardware vibe</td>
+                        <td>panels, labels, and glyphs feel like a device front-panel, not a glossy app</td>
+                    </tr>
+                    <tr>
+                        <td>few rules, repeated</td>
+                        <td>small set of ratios, a single grid, a single spacing cadence, a known layer stack</td>
+                    </tr>
+                    <tr>
+                        <td>documentation as UI</td>
+                        <td>each page shows “what”, “why”, and “how” (table + demo + CSS snippet)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="pageSubtitle">effects_as_language<span>.crt</span></h2>
+            <p>The CRT filter isn’t decoration—it’s a narrative device. Scanlines and flicker suggest analog hardware; the moving scanline reads like a refresh pass; subtle colour split evokes phosphor bloom. Effects are intentionally toggleable so the system can switch from “vibe” to “reading mode.”</p>
+            <table aria-label="Effects rationale table">
+                <thead>
+                    <tr>
+                        <th>effect</th>
+                        <th>does</th>
+                        <th>why</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>scanlines</td>
+                        <td>horizontal banding overlay</td>
+                        <td>recalls CRT phosphor rows; immediately signals the era</td>
+                    </tr>
+                    <tr>
+                        <td>flicker</td>
+                        <td>subtle opacity noise</td>
+                        <td>adds “alive” screen feel without changing layout</td>
+                    </tr>
+                    <tr>
+                        <td>scanline sweep</td>
+                        <td>moving line across viewport</td>
+                        <td>reads like a refresh/boot diagnostic pass</td>
+                    </tr>
+                    <tr>
+                        <td>text shadow</td>
+                        <td>colour split around text</td>
+                        <td>mimics signal bleed; boosts retro identity</td>
+                    </tr>
+                    <tr>
+                        <td>slowload blackbox</td>
+                        <td>blackbox that blocks visibility for a second</td>
+                        <td>resembles when computer diodes had to slowly load in</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="pageSubtitle">xp_boot_vibe<span>.mbr</span></h2>
+            <p>The interaction mood is inspired by powering up an early-2000s PC (Windows XP era): clear status states, patient transitions, and interface elements that feel like physical controls. The “boot” idea shows up as: a sequence-like layout rhythm, measured headings, and effects that imply a screen waking up.</p>
+            <table aria-label="Boot sequence inspiration table">
+                <thead>
+                    <tr>
+                        <th>cue</th>
+                        <th>how it shows up here</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>startup hierarchy</td>
+                        <td>big titles, clear section headers, calm body text—like boot messages and control panels</td>
+                    </tr>
+                    <tr>
+                        <td>diagnostic clarity</td>
+                        <td>tables, tokens, and specs are formatted like logs/manuals (repeatable and scan-friendly)</td>
+                    </tr>
+                    <tr>
+                        <td>signal/inputs</td>
+                        <td>icons and labels behave like hardware glyphs: minimal, consistent, and functional</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="pageSubtitle">foundations_map<span>.map</span></h2>
+            <p>Each foundation page describes a single part of the system. Together they form a complete, remixable “kit” with consistent rails, scales, and labels.</p>
+            <table aria-label="Foundations index table">
+                <thead>
+                    <tr>
+                        <th>page</th>
+                        <th>what it explains</th>
+                        <th>what to look for</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location='types/grid.html'" style="cursor: pointer;">
+                        <td>grid_system<span>.mnl</span></td>
+                        <td>columns, gutters, margins, content width</td>
+                        <td>annotated overlay + grid measurements + CSS implementation</td>
+                    </tr>
+                    <tr onclick="window.location='types/spacing.html'" style="cursor: pointer;">
+                        <td>spacing_scale<span>.maa</span></td>
+                        <td>spacing cadence and tokens</td>
+                        <td>scale swatches + component padding demo</td>
+                    </tr>
+                    <tr onclick="window.location='types/breakpoints.html'" style="cursor: pointer;">
+                        <td>breakpoints<span>.log</span></td>
+                        <td>responsive ranges and layout rails</td>
+                        <td>breakpoint ruler + implementation snippet</td>
+                    </tr>
+                    <tr onclick="window.location='types/layers.html'" style="cursor: pointer;">
+                        <td>layer_stack<span>.str</span></td>
+                        <td>depth rules and z-index tokens</td>
+                        <td>stack demo (base/content/elevated/overlay)</td>
+                    </tr>
+                    <tr onclick="window.location='types/color.html'" style="cursor: pointer;">
+                        <td>colour_palette<span>.sig</span></td>
+                        <td>colour roles and combinations</td>
+                        <td>role swatches + usage combos + token snippet</td>
+                    </tr>
+                    <tr onclick="window.location='types/typography.html'" style="cursor: pointer;">
+                        <td>typography_specimen<span>.typ</span></td>
+                        <td>font pairing and type scale</td>
+                        <td>tables + token-driven scale + CSS implementation</td>
+                    </tr>
+                    <tr onclick="window.location='types/ratios.html'" style="cursor: pointer;">
+                        <td>image_ratios<span>.fra</span></td>
+                        <td>aspect ratio roles</td>
+                        <td>safe-area ratio frames + implementation snippet</td>
+                    </tr>
+                    <tr onclick="window.location='types/icons.html'" style="cursor: pointer;">
+                        <td>icon_library<span>.sym</span></td>
+                        <td>sprite-based glyph library</td>
+                        <td>full sprite preview + sizing table + examples</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="pageSubtitle">documentation_approach<span>.doc</span></h2>
+            <p>Documentation is written like a manual: short paragraphs, labeled tables, and “image-like” demos. Every rule is intended to be implementable—not just aesthetic.</p>
+            <table aria-label="Documentation format table">
+                <thead>
+                    <tr>
+                        <th>section type</th>
+                        <th>purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>tables</td>
+                        <td>clear, searchable specs (values, roles, and constraints)</td>
+                    </tr>
+                    <tr>
+                        <td>demos</td>
+                        <td>visual proof of the rule (overlays, swatches, rulers, stacks)</td>
+                    </tr>
+                    <tr>
+                        <td>css_implementation</td>
+                        <td>copy-paste scaffolding that ties back to <code>:root</code> tokens</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="pageSubtitle">references<span>.ref</span></h2>
+            <p>Primary references for the system’s voice and materials. Links are listed as plain text inside a code block for easy copy.</p>
+            <pre><code>IBM Plex Mono (type family)
+https://fonts.google.com/specimen/IBM+Plex+Mono
+
+IBM Design Language
+https://www.ibm.com/design/language/
+
+Master Boot Record (aesthetic reference)
+https://mbrserver.com/
+
+Windows XP Boot / startup (mood reference)
+https://www.youtube.com/watch?v=OSOROvhqE44
+
+Early brutalist websites
+https://www.supertools.design/brutalistwebsites/
+
+Brutal Web
+https://fountn.design/resource/brutal-web-neo-brutalist-websites-gallery/
+
+Craigslist
+https://vancouver.craigslist.org/
+</code></pre>
+        </section>
+        <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
+        <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
+    </div>
+
+    <script src="./newScript.js"></script>
+</body>
+</html>

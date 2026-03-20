@@ -21,6 +21,7 @@
             <nav class="checklist" aria-label="Foundation">
                 <p>overview.all</p>
                 <a href="../index.html" aria-current="page">home<span>.brd</span></a>
+                <a href="../philosophy.html">philosophy<span>.pla</span></a>
                 <br>
                 <p>foundation (1).col</p>
                 <a href="grid.html">grid_system<span>.mnl</span></a>
@@ -178,30 +179,28 @@
         <section>
             <h2 class="pageSubtitle">css_implementation<span>.css</span></h2>
             <p>Use the spacing tokens everywhere: padding, gaps, and section rhythm. Avoid inventing new pixel values.</p>
-            <pre><code>:root {
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 32px;
-  --space-6: 48px;
-  --space-7: 64px;
-  --space-8: 96px;
+            <pre><code>:root
+{
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 48px;
+    --space-7: 64px;
+    --space-8: 96px;
 }
 
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+.stack
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
 }
 
-.card {
-  padding: var(--space-3);
-}
+.card { padding: var(--space-3) }
 
-.section {
-  margin-top: var(--space-6);
-}</code></pre>
+.section { margin-top: var(--space-6) }</code></pre>
         </section>
         <div class="icon effectsToggle" style="--x:2; --y:4" onclick="toggleEffects()" role="button" tabindex="0" aria-label="Toggle CRT effects" aria-pressed="false"></div>
         <div class="icon lightDarkToggle" style="--x:3; --y:3" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme"></div>
